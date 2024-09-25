@@ -46,9 +46,9 @@ knitr::opts_chunk$set(
 -   Comprender las características de los principales tipos de argumentos en las funciones
 
 -   Ser capaz de construir funciones propias
+
 :::
 
- 
 
 # Funciones en R
 
@@ -60,9 +60,7 @@ knitr::opts_chunk$set(
 
 -   Las funciones cargadas desde los paquetes (incluido `R` básico) también se pueden modificar y sobrescribir
 
- 
-
-------------------------------------------------------------------------
+---
 
 # Estructura básica
 
@@ -75,7 +73,6 @@ knitr::include_graphics("./images/funcion.png")
 
 <font size="2">\* Modificado de <i>Wickham et al. 2016</i></font>
 
- 
 
 Podemos observar la estructura de funciones ya cargadas en nuestro entorno de `R`. Para ver el código simplemente corra al nombre de la función en `R` (sin el paréntesis). Por ejemplo, el código de la función `sd()` se puede mostrar de la siguiente manera:
 
@@ -84,11 +81,8 @@ Podemos observar la estructura de funciones ya cargadas en nuestro entorno de `R
 sd
 ```
 
- 
 
 En `Rstudio`, el código también se puede mostrar usando *F2* cuando el cursor está en el nombre de la función.
-
- 
 
 Además, podemos diseccionar las funciones en sus elementos básicos:
 
@@ -157,7 +151,7 @@ knitr::include_graphics("./images/nombre.png")
 
 Los nombres de las funciones tienen pocas restricciones. Siguen las mismas reglas que otros objetos en `R`. Algunas recomendaciones/reglas:
 
--   No utilice nombres de objetos comunes `R` (por ejemplo, *iris*, *x*) u objetos que ya están en el entorno
+-   No utilice nombres de objetos comunes `R` (por ejemplo, `iris`, `x`) u objetos que ya están en el entorno
 
 -   No use nombres de funciones de uso frecuente (por ejemplo, `mean`)
 
@@ -350,8 +344,6 @@ mean(v1, na.rm = TRUE)
 
 knitr::include_graphics("./images/cuerpo.png")
 ```
-
- 
 
 El cuerpo de una función puede contener:
 
@@ -712,9 +704,7 @@ Esto ya debería ser obvio a este punto.
 -   Agregar descripciones a cada uno de los argumentos que toma  
 -   Función de prueba con diferentes valores/escenarios
 
-------------------------------------------------------------------------
-
- 
+---
 
 ::: {.alert .alert-info}
 ## Ejercicio 4
@@ -725,7 +715,7 @@ Esto ya debería ser obvio a este punto.
 
 4.3 Haga que la función además produzca un histograma del vector numérico proporcionado por el usuario
 
-4.4 Haga que la función escoja un color al azar para las barras del histograma cada vez que se corre (pista: `sample(vector.de.colores, 1)`)
+4.4 Haga que la función permita al usuario defini el color para las barras del histograma
 
 4.5 Añada un argumento a la función que permita el usuario, si lo desea, calcular la sumatoria (`sum()`) junto con el resto de los descriptores estadísticos
 
@@ -740,7 +730,7 @@ Esto ya debería ser obvio a este punto.
 
  
 
-------------------------------------------------------------------------
+---
 
 ## Lecturas adicionales
 
@@ -752,7 +742,7 @@ Esto ya debería ser obvio a este punto.
 
  
 
-------------------------------------------------------------------------
+---
 
 ## Referencias
 

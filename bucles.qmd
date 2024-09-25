@@ -42,7 +42,7 @@ cols <- brewer.pal(10, "Spectral")
 ::: {.alert .alert-info}
 # Objetivos del manual {.unnumbered .unlisted}
 
--   Aprender a procesar de forma serial operaciones que deben repetirse sobre diferentes objetos
+-   Aprender a aplicar de forma serial operaciones que deben repetirse sobre diferentes objetos
 -   Familiarizarse con el uso de bucles en la plataforma R
 -   Tener una noción general de los opciones disponibles en R para construir bucles
 :::

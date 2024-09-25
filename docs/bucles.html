@@ -151,6 +151,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">Bucles</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./como_simular_datos.html">
+ <span class="dropdown-text">Simular datos</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./modelos_de_regresion.html">
  <span class="dropdown-text">Modelos de regresión</span></a>
   </li>  
@@ -254,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">24 de septiembre de 2024</p>
+      <p class="date">25 de septiembre de 2024</p>
     </div>
   </div>
   
@@ -275,7 +279,7 @@ pre.numberSource code
 <section id="objetivos-del-manual" class="level1 unnumbered unlisted alert alert-info">
 <h1 class="unnumbered unlisted">Objetivos del manual</h1>
 <ul>
-<li>Aprender a procesar de forma serial operaciones que deben repetirse sobre diferentes objetos</li>
+<li>Aprender a aplicar de forma serial operaciones que deben repetirse sobre diferentes objetos</li>
 <li>Familiarizarse con el uso de bucles en la plataforma R</li>
 <li>Tener una noción general de los opciones disponibles en R para construir bucles</li>
 </ul>
@@ -1096,17 +1100,17 @@ flowchart LR
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">replicate</span>(<span class="at">n =</span> <span class="dv">3</span>, <span class="at">expr =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>          [,1]      [,2]     [,3]
- [1,] -1.22301 -0.835491 -0.51289
- [2,]  0.38645 -0.271236 -0.20242
- [3,] -0.45922  0.715896  1.16991
- [4,]  1.67629 -1.272671  1.50406
- [5,] -0.95064 -0.614906  0.98889
- [6,] -0.62559  0.566485  0.89146
- [7,] -0.57830  1.381543 -0.30540
- [8,]  0.35113  1.148869 -0.20809
- [9,]  2.00455 -0.029123  0.16365
-[10,] -0.32178 -0.550290  0.31766</code></pre>
+<pre><code>            [,1]      [,2]     [,3]
+ [1,]  0.5171733  0.017186  0.66384
+ [2,]  0.0098987  0.338538 -1.09317
+ [3,] -1.0182081  0.683702 -1.09875
+ [4,]  0.0856129  0.170503  0.16620
+ [5,]  0.3648114 -0.757073  0.65209
+ [6,]  0.6047044  0.674044 -0.90076
+ [7,] -0.7817623  1.147296  0.53774
+ [8,] -0.6686153 -0.041999  0.18944
+ [9,] -0.4839747 -2.393459  0.26764
+[10,]  0.0668806  1.035826  1.10081</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1184,7 +1188,7 @@ flowchart LR
 <span id="cb44-21"><a href="#cb44-21"></a><span class="fu">head</span>(cc_vector)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  0.28473 -0.11874  0.12423  0.39809  0.22847 -0.25602</code></pre>
+<pre><code>[1] -0.071958  0.152826  0.074225  0.355930  0.016708 -0.034400</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1888,7 +1892,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb52-42"><a href="#cb52-42" aria-hidden="true" tabindex="-1"></a>::: {.alert .alert-info}</span>
 <span id="cb52-43"><a href="#cb52-43" aria-hidden="true" tabindex="-1"></a><span class="fu"># Objetivos del manual {.unnumbered .unlisted}</span></span>
 <span id="cb52-44"><a href="#cb52-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-45"><a href="#cb52-45" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Aprender a procesar de forma serial operaciones que deben repetirse sobre diferentes objetos</span>
+<span id="cb52-45"><a href="#cb52-45" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Aprender a aplicar de forma serial operaciones que deben repetirse sobre diferentes objetos</span>
 <span id="cb52-46"><a href="#cb52-46" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Familiarizarse con el uso de bucles en la plataforma R</span>
 <span id="cb52-47"><a href="#cb52-47" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Tener una noción general de los opciones disponibles en R para construir bucles</span>
 <span id="cb52-48"><a href="#cb52-48" aria-hidden="true" tabindex="-1"></a>:::</span>
