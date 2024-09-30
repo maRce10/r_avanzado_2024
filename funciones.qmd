@@ -292,13 +292,13 @@ El uso de paquetes externos es la caracteristica mas util de R ya que permite ha
 Podemos explorar los paquetes disponibles para R en [la página de CRAN](https://cran.r-project.org/) (hacer click en el enlace "packages").
 
 ::: {.alert .alert-info}
-### Ejercicio 2
+### Ejercicio 1
 
--   Busque un paquete que le interese en CRAN
+1.1 Busque un paquete que le interese en CRAN
 
--   Instale el paquete y carguelo
+1.2 Instale el paquete y cárguelo
 
--   Corra el codigo de ejemplo de una de sus funciones
+1.3 Corra el código de ejemplo de una de sus funciones
 :::
 
 
@@ -559,23 +559,21 @@ mean(v1, na.rm = TRUE)
  
 
 ::: {.alert .alert-info}
-## Ejercicio 1
+## Ejercicio 2
 
-1.1 ¿Qué hace la función `cor.test()`?
+2.1 ¿Qué hace la función `cor.test()`?
 
-1.2 Úsela con "Sepal.Length" y "Sepal.Width" de los datos de ejemplo *iris* (use `data(iris)`)
+2.2 Úsela con "Sepal.Length" y "Sepal.Width" de los datos de ejemplo *iris* (use `data(iris)`)
 
-1.3 ¿Qué argumentos deben proporcionarse?
+2.3 ¿Qué argumentos deben proporcionarse?
 
-1.4 ¿Qué hace el argumento *alternative*? Use diferentes valores para este argumento y compare los resultados
+2.4 ¿Qué hace el argumento *alternative*? Use diferentes valores para este argumento y compare los resultados
 
-1.5 ¿Cómo se puede calcular la correlación de Spearman?
+2.5 ¿Cómo se puede calcular la correlación de Spearman?
 
-1.6 ¿Qué tipo de objeto devuelve esta función?
+2.6 ¿Cómo puede obtener el valor de **p** directamente del resultado de la función (sin guardar el resultado como un objeto)?
 
-1.7 ¿Cómo puede obtener el valor de **p** directamente del resultado de la función (sin guardar el resultado como un objeto)?
-
-1.8 Escoga una función de R y lea su documentación con el fin de entender su uso, cada uno de sus argumentos (y que tipo de objetos requieren) y el resultado que produce (es probable que se le pida que explique esto al grupo)
+2.7 Escoga una función de R y lea su documentación con el fin de entender su uso, cada uno de sus argumentos (y que tipo de objetos requieren) y el resultado que produce (es probable que se le pida que explique esto al grupo)
 :::
 
 ------------------------------------------------------------------------
@@ -720,19 +718,19 @@ out[[2]]
  
 
 ::: {.alert .alert-info}
-## Ejercicio 2
+## Ejercicio 3
 
-2.1 Cree una función llamada `promedio` que calcule el promedio de un vector numérico. Internamente solo puede utilizar las funciones `sum()` y `length()` (suma y división, no puede llamar la función `mean()`)
+3.1 Cree una función llamada `promedio` que calcule el promedio de un vector numérico. Internamente solo puede utilizar las funciones `sum()` y `length()` (suma y división, no puede llamar la función `mean()`)
 
-2.2 Cree una función que tome 2 argumentos numéricos (llámelos 'x' y 'y'), eleve cada uno al cuadrado y luego los sume
+3.2 Cree una función que tome 2 argumentos numéricos (llámelos 'x' y 'y'), eleve cada uno al cuadrado y luego los sume
 
-2.3 Agregue valores predeterminados a cada argumento
+3.3 Agregue valores predeterminados a cada argumento
 
-2.4 Ejecute la función usando los valores predeterminados
+3.4 Ejecute la función usando los valores predeterminados
 
-2.5 Ejecute la función usando un valor predeterminado y uno proporcionado en la llamada
+3.5 Ejecute la función usando un valor predeterminado y uno proporcionado
 
-2.6 Ejecute la función proporcionando ambos valores en la llamada
+3.6 Ejecute la función proporcionando ambos valores
 :::
 
  
@@ -801,15 +799,15 @@ mean_sum(x = 2, y = 3)
  
 
 ::: {.alert .alert-info}
-## Ejercicio 3
+## Ejercicio 4
 
-3.1 Cree una función que tome 3 argumentos numéricos, multiplíquelos y luego calcule el logaritmo natural del resultado (función `log()`)
+4.1 Cree una función que tome 3 argumentos numéricos, multiplíquelos y luego calcule el logaritmo natural del resultado (función `log()`)
 
-3.2 Agregue valores predeterminados a cada argumento
+4.2 Agregue valores predeterminados a cada argumento
 
-3.3 Ejecute la función con uno de los argumentos con un número negativo. ¿Qué pasa? ¿Por qué?
+4.3 Ejecute la función con uno de los argumentos con un número negativo. ¿Qué pasa? ¿Por qué?
 
-3.4 Agregue un argumento lógico que permita a los usuarios (si lo desean) convertir los argumentos de entrada a su valor absoluto (usando la función `abs()`). Agregue las modificaciones necesarias para que la función haga los cálculos con y sin valores absolutos.
+4.4 Agregue un argumento lógico que permita a los usuarios (si lo desean) convertir los argumentos de entrada a su valor absoluto (usando la función `abs()`). Agregue las modificaciones necesarias para que la función haga los cálculos con y sin valores absolutos.
 
 ```{r, eval = F, echo = F}
 # a)
@@ -825,11 +823,9 @@ fcn_1(1, 2, -1)
 ```
 :::
 
-------------------------------------------------------------------------
+---
 
 # Ventajas de usar funciones
-
- 
 
 ## Código mas limpio
 
@@ -951,25 +947,25 @@ Esto ya debería ser obvio a este punto.
 ---
 
 ::: {.alert .alert-info}
-## Ejercicio 4
+## Ejercicio 5
 
-4.1 Cree una funcion que calcule el promedio, la desviación estándar y el error estándar de un vector numérico. Estos valores deben ser devueltos como una lista con nombres.
+5.1 Cree una funcion que calcule el promedio, la desviación estándar y el error estándar de un vector numérico. Estos valores deben ser devueltos como una lista con nombres.
 
-4.2 Permita a los usuarios ignorar los `NAs` (similar al argumento `na.rm` en `mean()`, pista: añada un argumento lógico)
+5.2 Permita a los usuarios ignorar los `NAs` (similar al argumento `na.rm` en `mean()`, pista: añada un argumento lógico)
 
-4.3 Haga que la función además produzca un histograma del vector numérico proporcionado por el usuario
+5.3 Haga que la función además produzca un histograma del vector numérico proporcionado por el usuario
 
-4.4 Haga que la función permita al usuario defini el color para las barras del histograma
+5.4 Haga que la función permita al usuario defini el color para las barras del histograma
 
-4.5 Añada un argumento a la función que permita el usuario, si lo desea, calcular la sumatoria (`sum()`) junto con el resto de los descriptores estadísticos
+5.5 Añada un argumento a la función que permita el usuario, si lo desea, calcular la sumatoria (`sum()`) junto con el resto de los descriptores estadísticos
 
-4.6 Agregue el promedio y la desviación estándar al título del histograma (pista: use `paste()`)
+5.6 Agregue el promedio y la desviación estándar al título del histograma (pista: use `paste()`)
 
-4.7 Modifique la función para que también cree una linea vertical indicando el promedio del vector numérico proporcionado por el usuario
+5.7 Modifique la función para que también cree una linea vertical indicando el promedio del vector numérico proporcionado por el usuario
 
-4.8 Modifique la función para que añada un polígono transparente sobre el área que cubre el promedio +/- la desviación estándar (puede usar la función `rect()`)
+5.8 Modifique la función para que añada un polígono transparente sobre el área que cubre el promedio +/- la desviación estándar (puede usar la función `rect()`)
 
-4.9 Modifique la función con un argumento lógico que permita al usuario controlar si se crea un gráfico o no
+5.9 Modifique la función con un argumento lógico que permita al usuario controlar si se crea un gráfico o no
 :::
 
  
