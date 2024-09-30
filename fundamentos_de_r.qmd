@@ -512,8 +512,6 @@ knitr::kable(d, row.names = F, escape = FALSE) |>
 
 2 ** 2
 
-2:3 %in% 2:4
-
 ```
 
  
@@ -556,6 +554,17 @@ knitr::kable(d, row.names = F,  booktabs = TRUE, escape = FALSE)
 
 5 %in% 1:4
 ```
+
+Los paréntesis utilizados para extraer subconjuntos de objetos también son funciones:
+
+```{r}
+
+letters[3:4]
+
+"["(letters, 3:4)
+
+```
+
 
  
 

@@ -62,6 +62,248 @@ knitr::opts_chunk$set(
 
 ---
 
+# Tipos de funciones
+
+
+## Funciones integradas
+
+### Funciones básicas
+
+R viene con muchas funciones que puedes usar para hacer tareas sofisticadas:
+
+```{r}
+# built in functions
+bi <- builtins(internal = FALSE)
+
+length(bi)
+
+```
+
+ 
+
+Algunas funciones vienen de forma predeterminada con R básico. Nuevas funciones pueden ser cargadas como parte de paquetes adicionales o incluso creadas por el usuario.
+
+```{mermaid}
+
+flowchart LR
+    classDef largeText font-size:18px, padding:15px;
+
+    F(Funciones) --> BF(Funciones Integradas)
+    BF --> OP(Operadores)
+    BF --> BA(Funciones Básicas)
+    F --> PF(Paquetes)
+    F --> UF(Funciones Definidas por el Usuario)
+
+    class R,D,D1,D2,F largeText;
+
+    style F fill:#357BA266, stroke:#000, stroke-width:2px, color:#FFF, width:120px
+    style BF fill:#A0DFB966, stroke:#000, stroke-width:2px, color:#000
+    style BA fill:#DEF5E566, stroke:#000, stroke-width:2px, color:#000
+    style OP fill:#DEF5E566, stroke:#000, stroke-width:2px, color:#000    
+    style PF fill:#A0DFB966, stroke:#000, stroke-width:2px, color:#000000
+    style UF fill:#A0DFB966, stroke:#000, stroke-width:2px, color:#000
+
+
+```
+
+### Operadores
+
+Los operadores son funciones:
+
+```{r}
+
+1 + 1
+
+
+'+'(1, 1)
+
+2 * 3
+
+
+'*'(2, 3)
+
+
+```
+
+ 
+
+#### Operadores mas utilizados
+
+Operadores aritméticos:
+
+```{r, echo=F}
+d <- data.frame(
+c("+" , "suma"),
+c("-", 	"resta"),
+c("*" ,	"multiplicación"),
+c("/",	"división"),
+c("^ or **",	"exponente"))
+
+
+d <- t(d)
+
+colnames(d) <- c("Operador      ", "Descrición  ")
+
+knitr::kable(d, row.names = F, escape = FALSE) |>
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 18)
+
+```
+
+ 
+
+```{r}
+
+1 - 2
+
+1 + 2
+
+2 ^ 2
+
+2 ** 2
+
+```
+
+ 
+
+Operadores lógicos:
+
+```{r, echo=F, results='asis'}
+d <- matrix(
+c("<", "menor que", "<=", "menor o igual que",">", "mayor que", ">=",	"mayor o igual que", "==", "exactamente igual que", "!=",	"diferente que", "!x",	"No es x", "x | y", "	x O y", "x & y", "x Y y","x %in% y", "correspondencia"), ncol = 2, byrow = TRUE)
+
+
+
+d <- as.data.frame(d)
+
+names(d) <- c("Operador      ", "Descrición  ")
+
+knitr::kable(d, row.names = F,  booktabs = TRUE, escape = FALSE) 
+# |>
+ # kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 18, protect_latex = TRUE)
+
+```
+
+ 
+
+```{r}
+
+1 < 2 
+
+1 > 2 
+
+1 <= 2 
+
+1 == 2
+
+1 != 2
+
+1 > 2 
+
+5 %in% 1:6
+
+5 %in% 1:4
+```
+
+Los paréntesis utilizados para extraer subconjuntos de objetos también son funciones:
+
+```{r}
+
+letters[3:4]
+
+"["(letters, 3:4)
+
+```
+
+
+ 
+
+::: {.alert .alert-warning}
+### Vectorización
+
+La mayoría de las funciones están vectorizadas:
+
+```{r, eval=F}
+
+1:6 * 1:6
+
+```
+
+![](images/vectorize.png){width="100%"}
+
+<font size="2">\* Modified from <i>Grolemund & Wickham 2017</i></font>
+
+ 
+
+```{r, echo=F}
+
+1:6 * 1:6
+```
+
+```{r}
+
+1:6 - 1:6
+```
+
+R recicla vectores de longitud desigual:
+
+```{r, eval=F}
+
+1:6 * 1:5
+
+```
+
+![](images/recycle.png){width="100%"}
+
+<font size="2">\* Modified from <i>Grolemund & Wickham 2017</i></font>
+:::
+
+ 
+
+### Funciones de paquetes adicionales
+
+Estas son funciones que son incluidas en paquetes adicionales que se pueden instalar y cargar en R. Para ser utilizadas el paquete debe ser instalado y cargado.Por ejemplo para usar la función `corTest` del paquete "psych" primero debemos instalar. Los paquetes son instalados del servidor de CRAN (Comprehensive R Archive Network) con la función `install.packages()`:
+
+```{r}
+#| eval: false
+
+install.packages("psych")
+
+
+```
+
+.. y cargar el paquete:
+
+```{r}
+
+library(psych)
+
+```
+
+Una vez instalado y cargado 'psych', podemos llamar a la función `corTest`:
+
+```{r}
+
+corTest(iris$Sepal.Length, iris$Sepal.Width)
+
+```
+
+El uso de paquetes externos es la caracteristica mas util de R ya que permite hacer uso de un número casi infinito de funciones especializadas en diferentes tareas así como de campos muy diversos de la ciencia y la industria.
+
+Podemos explorar los paquetes disponibles para R en [la página de CRAN](https://cran.r-project.org/) (hacer click en el enlace "packages").
+
+::: {.alert .alert-info}
+### Ejercicio 2
+
+-   Busque un paquete que le interese en CRAN
+
+-   Instale el paquete y carguelo
+
+-   Corra el codigo de ejemplo de una de sus funciones
+:::
+
+
+--- 
+
 # Estructura básica
 
 Todas las funciones son creadas iguales ... mediante la función `function()` y siguen la misma estructura:
@@ -503,28 +745,30 @@ Son argumentos que pueden tomar solo dos valores: `TRUE` o `FALSE`. Estos argume
 
 ```{r}
 
-# creemos el objeto a con valor 2
-a <- 2
+# creemos un valor que represente un argumento logico
+valor_logico <- TRUE
 
-# elevemos a la 2 si a es mayor q 0
-if (a > 0) {
-  a^2
+# utilizamos un operador if
+if (valor_logico) {
+  print("se ejecuta la accion 1")
 }
 
-# elevemos a la 2 si a es mayor q 0 de lo contrario elevemoslo a la 100
-if (a > 0) {
-  a^2
+# ir ahora un if + else
+if (valor_logico) {
+  print("se ejecuta la accion 1")
 } else {
-  a^100
+  print("se ejecuta la accion 2")
 }
 
-# con a negativo
-a <- -3
-if (a > 0) {
-  a^2
+# cuando es FALSE
+valor_logico <- FALSE
+
+if (valor_logico) {
+  print("se ejecuta la accion 1")
 } else {
-  a^3
+  print("se ejecuta la accion 2")
 }
+
 ```
 
  
@@ -740,15 +984,13 @@ Esto ya debería ser obvio a este punto.
 
 -   <a href="http://cran.r-project.org/doc/manuals/R-intro.html#Writing-your-own-R-intro.html#Writing-your-own-functions">The official R intro material on writing your own functions</a> (ir a "Writing your own function")
 
- 
-
 ---
 
 ## Referencias
 
 -   Wickham, Hadley, and Garrett Grolemund. 2016. *R for data science: import, tidy, transform, visualize, and model data*. [website](http://r4ds.had.co.nz)
 
-------------------------------------------------------------------------
+---
 
 <font size="4">Información de la sesión</font>
 
