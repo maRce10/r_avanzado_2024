@@ -827,9 +827,6 @@ La condición determina si el ciclo debe detenerse.
 
 Una característica importante de los bucles `while`,`repeat` y `for` es que pueden tomar resultados de iteraciones anteriores como entrada en iteraciones posteriores. Esto se debe a que los objetos creados dentro de la función se guardan en el entorno actual (a diferencia de los bucles `Xapply`).
 
-------------------------------------------------------------------------
-
- 
 
 # Bucles 'While'
 
