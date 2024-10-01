@@ -456,7 +456,30 @@ knitr::include_graphics("./images/argumentos.png")
 
  
 
-Permiten a los usuarios ingresar objetos en la función. Los argumentos pueden o no tener valores predeterminados. Cuando los argumentos tienen valores predeterminados, no es necesario proporcionarlos:
+Permiten a los usuarios ingresar objetos en la función. Los valores proporcionados en los argumentos son utilizados en el cuerpo de la funcion para hacer los cálculos necesarios. 
+
+```{mermaid}
+
+flowchart LR
+    classDef largeText font-size:18px, padding:15px;
+
+    A(Argumentos) --> B(Tarea)
+    subgraph Cuerpo
+    B --> C("Enunciado de retorno\nreturn()")
+    end
+    C --> D(Resultado)
+
+    style A fill:#38AAAC80, stroke:#000, stroke-width:2px, color:#FFF
+    style B fill:#BEBEBE1A, stroke:#000, stroke-width:0.5px, color:#FFF
+    style C fill:#BEBEBE1A, stroke:#000, stroke-width:0.5px, color:#FFF
+    style D fill:#BEBEBE1A, stroke:#000, stroke-width:0.5px, color:#FFF
+    style Cuerpo fill:#BEBEBE1A
+
+```
+
+
+
+Los argumentos pueden o no tener valores predeterminados. Cuando los argumentos tienen valores predeterminados, no es necesario proporcionarlos:
 
 ```{r eval = T}
 
@@ -593,14 +616,32 @@ El cuerpo de una función puede contener:
 
 -   Definición de resultados
 
- 
 
 El cuerpo de la función puede tomar el mismo tipo de código utilizado en cualquier rutina de `R`. Sin embargo, los objetos creados no estarán disponibles en el entorno.
+
+```{mermaid}
+
+flowchart LR
+    classDef largeText font-size:18px, padding:15px;
+
+    A(Argumentos) --> B(Tarea)
+    subgraph Cuerpo
+    B --> C("Enunciado de retorno\nreturn()")
+    end
+    C --> D(Resultado)
+
+    style A fill:#A0DFB980, stroke:#000, stroke-width:0.5px
+    style B fill:#38AAAC80, stroke:#000, stroke-width:2px
+    style C fill:#38AAAC80, stroke:#000, stroke-width:2px
+    style D fill:#BEBEBE1A, stroke:#000, stroke-width:0.5px
+    style Cuerpo fill:#DEF5E54D
+    
+     
+```
 
 Cuando se realizan varios cálculos, debemos incluir una *declaración de retorno* (return statement), que define explícitamente la salida de la función. Esto se hace usando la función `return()`:
 
 ```{r}
-
 # sin "return statement"
 f1 <- function(x, y) {
   z1 <- 2 * x + y
@@ -773,7 +814,33 @@ if (valor_logico) {
 
 La parte dentro de los paréntesis justo después de `if` es la evaluación lógica.
 
-Estos operadores son utilizados en el cuerpo de la función cuando esta lleva un argumento lógico. Por ejemplo, la siguiente función utiliza un argumento lógico para decidir si la operación algebraica a realizar es una suma o un promedio:
+Estos operadores son utilizados en el cuerpo de la función cuando esta lleva un argumento lógico. 
+
+```{mermaid}
+
+flowchart LR
+    classDef largeText font-size:18px, padding:15px;
+
+    A(Argumento lógico) --> B(Evaluación)
+    subgraph Cuerpo
+    B -- verdadero --> C(Tarea 1)
+    B -- falso --> D(Tarea 2)
+    C --> E("Enunciado de retorno\nreturn()")
+    D --> E
+    end
+    E --> F(Resultado)
+
+    style A fill:#A0DFB980, stroke:#000, stroke-width:2px
+    style B fill:#38AAAC80, stroke:#000, stroke-width:2px
+    style C fill:#38AAAC80, stroke:#000, stroke-width:2px
+    style D fill:#40498E80, stroke:#000, stroke-width:2px
+    style E fill:#40498E4D, stroke:#000, stroke-width:2px
+    style F fill:#BEBEBE1A, stroke:#000, stroke-width:0.5px
+    style Cuerpo fill:#DEF5E54D
+    
+```
+
+Por ejemplo, la siguiente función utiliza un argumento lógico para decidir si la operación algebraica a realizar es una suma o un promedio:
 
 ```{r}
 mean_sum <- function(x, y, prom = FALSE) {
