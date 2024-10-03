@@ -1,59 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/fundamentos_de_r.html</loc>
-    <lastmod>2024-09-30T14:44:54.380Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/bucles.html</loc>
-    <lastmod>2024-09-30T20:09:26.248Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/index.html</loc>
-    <lastmod>2024-09-25T16:08:45.334Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/funciones.html</loc>
-    <lastmod>2024-10-01T18:29:55.564Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/preparacion_curso.html</loc>
-    <lastmod>2023-09-25T22:24:25.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/respuestas_tarea5.html</loc>
-    <lastmod>2023-11-12T18:48:15.000Z</lastmod>
-  </url>
-  <url>
     <loc>https://marce10.github.io/R_avanzado_2024/tarea4.html</loc>
-    <lastmod>2023-10-06T01:26:35.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/estadistica_tradicional_regresion.html</loc>
-    <lastmod>2023-09-24T15:55:34.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/reportes_dinamicos.html</loc>
-    <lastmod>2023-09-28T23:36:21.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/tarea5.html</loc>
-    <lastmod>2023-11-12T20:10:20.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/modelos_de_regresion.html</loc>
-    <lastmod>2024-09-25T16:36:16.457Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/instructor.html</loc>
-    <lastmod>2023-09-25T00:03:26.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/como_simular_datos.html</loc>
-    <lastmod>2024-09-25T16:31:26.446Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2024/ggplot2.html</loc>
-    <lastmod>2023-09-24T01:49:16.000Z</lastmod>
+    <lastmod>2024-10-03T21:00:12.342Z</lastmod>
   </url>
 </urlset>

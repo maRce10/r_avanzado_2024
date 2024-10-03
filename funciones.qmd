@@ -406,7 +406,7 @@ Los nombres de las funciones tienen pocas restricciones. Siguen las mismas regla
 En caso de que tenga varias funciones con el mismo nombre, puede llamarlas individualmente utilizando el nombre del paquete (o *namespace*) seguido de `::`:
 
 ```{r}
-# crear funcion sd
+# crear función sd
 sd <- function(x) x^10
 
 # no calcula desv. st.
@@ -456,7 +456,7 @@ knitr::include_graphics("./images/argumentos.png")
 
  
 
-Permiten a los usuarios ingresar objetos en la función. Los valores proporcionados en los argumentos son utilizados en el cuerpo de la funcion para hacer los cálculos necesarios. 
+Permiten a los usuarios ingresar objetos en la función. Los valores proporcionados en los argumentos son utilizados en el cuerpo de la función para hacer los cálculos necesarios. 
 
 ```{mermaid}
 
@@ -1016,19 +1016,19 @@ Esto ya debería ser obvio a este punto.
 ::: {.alert .alert-info}
 ## Ejercicio 5
 
-5.1 Cree una funcion que calcule el promedio, la desviación estándar y el error estándar de un vector numérico. Estos valores deben ser devueltos como una lista con nombres.
+5.1 Cree una función que calcule el promedio, la desviación estándar y el error estándar de un vector numérico. Estos valores deben ser devueltos como una lista con nombres.
 
-5.2 Permita a los usuarios ignorar los `NAs` (similar al argumento `na.rm` en `mean()`, pista: añada un argumento lógico)
+5.2 Permita a los usuarios ignorar los `NAs` (similar al argumento `na.rm` en `mean()`, pista: añada un argumento lógico, puede utilizar la funcion `na.omit()`)
 
 5.3 Haga que la función además produzca un histograma del vector numérico proporcionado por el usuario
 
-5.4 Haga que la función permita al usuario defini el color para las barras del histograma
+5.4 Haga que la función permita al usuario definir el color para las barras del histograma
 
 5.5 Añada un argumento a la función que permita el usuario, si lo desea, calcular la sumatoria (`sum()`) junto con el resto de los descriptores estadísticos
 
 5.6 Agregue el promedio y la desviación estándar al título del histograma (pista: use `paste()`)
 
-5.7 Modifique la función para que también cree una linea vertical indicando el promedio del vector numérico proporcionado por el usuario
+5.7 Modifique la función para que también cree una linea vertical indicando el promedio del vector numérico proporcionado por el usuario (pista `abline()`)
 
 5.8 Modifique la función para que añada un polígono transparente sobre el área que cubre el promedio +/- la desviación estándar (puede usar la función `rect()`)
 
