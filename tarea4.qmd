@@ -54,9 +54,9 @@ library("DT")
 
 Los elementos de la lista deben tener los nombres `clase`, `largo` y `faltantes`, respectivamente.
 
-1. Evalue la función `num_vector` con el siguiente vector: `c(1, 2, 3, NA, 5, 6, 7, 8, 9, 10)`
+2. Evalue la función `num_vector` con el siguiente vector: `c(1, 2, 3, NA, 5, 6, 7, 8, 9, 10)`
 
-1. Cree una función llamada `char_vector` que reciba un vector de caracteres y devuelva una lista con tres elementos: 
+3. Cree una función llamada `char_vector` que reciba un vector de caracteres y devuelva una lista con tres elementos: 
 
     - el número de elementos únicos (categorías únicas) en el vector (pista: `length(unique(x))`)
     - el número de observaciones por categoría (pista: `table(x)`) 
@@ -64,9 +64,9 @@ Los elementos de la lista deben tener los nombres `clase`, `largo` y `faltantes`
 
 Los elementos de la lista deben tener nombres.
 
-1. Evalue la función `char_vector` con el siguiente vector: `c("a", "b", "a", "b", "b", "c", "b")`   
+4. Evalue la función `char_vector` con el siguiente vector: `c("a", "b", "a", "b", "b", "c", "b")`   
 
-1. Cree una función llamada `check_vector` que reciba un vector. Si el vector es numérico debe aplicar la función `num_vector` y si es de caracteres debe aplicar la función `char_vector`. Si el vector no es ni numérico ni de caracteres, la función debe imprimir un mensaje (`print()`) indicando "x no es numérico ni categórico" (pista: `is.numeric()` y `is.character()`). 
+5. Cree una función llamada `check_vector` que reciba un vector. Si el vector es numérico debe aplicar la función `num_vector` y si es de caracteres debe aplicar la función `char_vector`. Si el vector no es ni numérico ni de caracteres, la función debe imprimir un mensaje (`print()`) indicando "x no es numérico ni categórico" (pista: `is.numeric()` y `is.character()`). 
 
 :::
 
