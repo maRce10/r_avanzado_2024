@@ -64,7 +64,7 @@ code-overflow: wrap
 code-copy: true
 date: today
 lang: es
-embed-resources: true
+embed-resources: false
 format:
   html:
     css: styles.css

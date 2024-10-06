@@ -50,7 +50,7 @@ fill <- list(alert = "#cff4fc", success = "#d1e7dd")
 
  
 
----
+------------------------------------------------------------------------
 
 Paquetes a utilizar en este manual:
 
@@ -579,8 +579,6 @@ summ_xy_mod2$coefficients
     -   $\beta_1$ (the effect size of 'x1') was set to `r b1` and was estimated as `r round(summ_xy_mod2$coefficients[2, 1], 3)` by the model
 :::
 
-
-
 ::: {.alert .alert-warning}
 <center><font size="5"><b>Caso de estudio</b></font></center>
 
@@ -609,7 +607,6 @@ knitr::include_graphics("./images/duet_reg.png")
 
 ::: {.alert .alert-info}
 <font size="5">Ejercicio 4</font>
-
 
 -   Aumente el tamaño de la muestra (`n`) a 1000 o más
 
@@ -1415,7 +1412,6 @@ summary(xy_mod)
 
 Los GLM nos permiten modelar la asociación a variables respuesta que no siguen una distribución normal. Además, permiten modelar distribuciones que se asemejan más al proceso que generó los datos. El siguiente código crea un juego de datos con una respuesta que representa cuentas (por lo tanto, no normal):
 
-
 ```{r}
 # Simulación de datos
 set.seed(123)  # Para reproducibilidad
@@ -1534,9 +1530,7 @@ knitr::include_graphics("./images/butterflies.png")
 <font size="5">Ejercicio 8</font>
 
 -   Intente correr el modelo anterior `lm()` (con una distribución gaussiana), compare los resultados y compruebe los residuos (`plot_model(model_name, type = "diag")`)
-
 :::
-
 
 Existen muchas otras funciones de distribución y enlace:
 
@@ -1653,7 +1647,6 @@ summary(mix_eff_mod)
 
 El modelo detectó correctamente el patrón simulado y la estimación de $\beta_1$ (`r round(fixef(mix_eff_mod)[2], 3)`) es muy cercana al valor simulado.
 
-
 ::: {.alert .alert-success}
  
 
@@ -1713,7 +1706,6 @@ cbind(interceptos, prom_pobs= prom_pobs[,2])
  
 :::
 
-
 ::: {.alert .alert-warning}
 <center><font size="5"><b>Caso de estudio</b></font></center>
 
@@ -1729,7 +1721,6 @@ knitr::include_graphics("./images/lbh_song_size.png")
 
  
 :::
-
 
 ### La paradoja de Simpson
 

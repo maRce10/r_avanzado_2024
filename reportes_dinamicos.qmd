@@ -2,14 +2,6 @@
 title: <font size="7"><b>Reportes dinámicos</b></font>
 ---
 
-```{=html}
-<style>
-body
-  { counter-reset: source-line 0; }
-pre.numberSource code
-  { counter-reset: none; }
-</style>
-```
 ```{r,echo=FALSE,message=FALSE}
 
 options("digits"=5)
@@ -17,7 +9,6 @@ options("digits.secs"=3)
 
 # options to customize chunk outputs
 knitr::opts_chunk$set(
-  class.source = "numberLines lineAnchors", # for code line numbers
   message = FALSE
  )
 
