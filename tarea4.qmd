@@ -17,11 +17,12 @@ knitr::opts_chunk$set(
 ```
 
 ::: {.alert .alert-warning}
-**Instrucciones**
+
+## Instrucciones {.unnumbered .unlisted}
 
 -   La fecha de entrega es el 11 de octubre a las 05:00 pm
 -   La tarea debe ser escrita en el formato para reportes dinámicos Rmarkdown o quarto
--   Debe entregar el archivo html generado del documento Rmarkdown/quarto por medio de mediación virtual (hay un enlace para someter la tarea). No envíe el archivo Rmd.
+-   Debe entregar el archivo html generado del documento Rmarkdown/quarto por medio de mediación virtual (hay un enlace para someter la tarea). No envíe el archivo Rmd/qmd.
 -   El reporte debe utilizar secciones de código ("chunks") separados para cada ejercicio y subtítulos para cada uno así como comentarios en texto
 -   El código de los bloques siempre debe ser visible (no use `echo = FALSE`)
 -   El código dentro de los bloques de código debe estar documentado con comentarios (usando #)
@@ -29,21 +30,10 @@ knitr::opts_chunk$set(
 -   Cada item tiene un valor de 5 puntos
 :::
 
- 
-
-```{r, echo = FALSE}
-
-# devtools::install_github("hadley/emo")
-library("leaflet")
-library("xaringanExtra")
-library("knitr")
-library("DT")
-
-```
-
-<!-- skyblue box -->
-
 ::: {.alert .alert-info}
+
+## Ejercicios {.unnumbered .unlisted} 
+
 1.  Cree una función llamada `num_vector` que reciba un vector y devuelva una lista que incluya:
 
     -   la clase del vector (pista: `class()`)
