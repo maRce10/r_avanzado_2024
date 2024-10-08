@@ -56,10 +56,10 @@ Los elementos de la lista deben tener nombres.
 
 5.  Cree una función llamada `check_vector` que reciba un vector. Si el vector es numérico debe aplicar la función `num_vector` y si es de caracteres debe aplicar la función `char_vector`. Si el vector no es ni numérico ni de caracteres, la función debe imprimir un mensaje (`print()`) indicando "x no es numérico ni categórico" (pista: `is.numeric()` y `is.character()`). 
 
-6.  Evalue la función `check_vector` con los siguientes vectores: 
+6.  Evalue la función `check_vector` con los siguientes 3 vectores (uno a la vez): 
   
-  - `c("a", "b", "a", "b", "b", "c", NA, "b")`
-  - `c(1, 2, 3, NA, 5, 6, 7, 8, 9, 10)`
-  - `c(FALSE, TRUE)`
+    - `c("a", "b", "a", "b", "b", "c", NA, "b")`
+    - `c(1, 2, 3, NA, 5, 6, 7, 8, 9, 10)`
+    - `c(FALSE, TRUE)`
   
 :::
