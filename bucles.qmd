@@ -1,15 +1,5 @@
 ---
 title: <font size="7"><b>Bucles</b></font>
-format:
-  html:
-    theme: simplex.scss
-    css: styles.css
-    toc: true
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    link-external-icon: false
-    link-external-newwindow: true
 ---
 
 ```{=html}
@@ -114,16 +104,14 @@ Si todo salió bien el vector "archivos_txt" deberia tener `r length(archivos_tx
 length(archivos_txt)
 ```
 
----
+------------------------------------------------------------------------
 
 ::: {.alert .alert-warning}
-
 # Bucles (loops)
 
 -   Proceso automatizado de varios pasos organizado como secuencias de acciones (p. Ej., procesos 'por lotes')
 -   Se usa para acelerar los procedimientos en los que se aplica la misma acción a muchos objetos (similares)
 -   Crítico para la gestión de grandes bases de datos ('big data', y buenas prácticas de programación)
-
 
 ```{mermaid}
 
@@ -143,12 +131,10 @@ flowchart LR
 
 ```
 
-
 2 tipos básicos:
 
 1)  Ejecutar para un número predefinido de iteraciones (es decir, tiempos). Estos se subdividen en dos clases:
     a.  Los resultados pueden ingresarse nuevamente en la siguiente iteración (bucles `for`)
- 
 
 ```{mermaid}
 
@@ -169,7 +155,7 @@ flowchart LR
 
 ```
 
-   b.  Los resultados de una interacción no pueden afectar a otras iteraciones (bucles `(X)apply`)
+b.  Los resultados de una interacción no pueden afectar a otras iteraciones (bucles `(X)apply`)
 
 ```{mermaid}
 
@@ -190,9 +176,7 @@ flowchart LR
 
 ```
 
-
 2)  Ejecutar hasta que se cumpla una condición predefinida (bucles `while` y`repeat`)
-
 
 ```{mermaid}
 
@@ -213,10 +197,9 @@ flowchart LR
     style D fill:#49C1AD66, stroke:#000, stroke-width:2px, color:#FFF
 
 ```
-
 :::
 
----
+------------------------------------------------------------------------
 
 # Bucles 'for'
 
@@ -240,7 +223,6 @@ flowchart LR
     style D fill:#357BA266, stroke:#000, stroke-width:2px, color:#FFF
 
 ```
-
 
 El bucle `for` se inicia con el operador `for`. A este se le da un vector (*sensu lato*: lista o vector atómico) sobre el cual repetir una tarea. La tarea se encuentra en el cuerpo del bucle:
 
@@ -338,7 +320,7 @@ resultados <- vector()
 # inicio del bucle
 for (i in vctr) {
   # cuerpo del bucle
-  i2 <- max(iris$Sepal.Length[iris$Species == i])
+  i2 <- mean(iris$Sepal.Length[iris$Species == i])
 
   # guardar resultados en vector vacio
   resultados <- append(resultados, i2)
@@ -366,16 +348,15 @@ knitr::include_graphics("./images/datos.png")
 Recordemos que los nombres de los archivos .TXT están guardados en un vector llamado `archivos_txt`. Podemos leer el primer archivo (i.e. el primer elemento en `archivos_txt`) de la siguiente forma:
 
 ```{r}
-
-
+# leer primer archivo
 archivo1 <-
   read.table(archivos_txt[1],
              header = TRUE,
              skip = 4,
              sep = "\t")
 
-# ver pirmeras 4 filas y 8 columnas
-head(archivo1[1:4, 1:8])
+# ver pirmeras 6 filas y 8 columnas
+head(archivo1[, 1:8])
 ```
 
  
@@ -741,7 +722,6 @@ Note que los resultados son agrupados en una matrix. 'expr' también puede repli
 ::: {.alert .alert-info}
 ## Ejercicio 2
 
-
 2.1 Haga un bucle `lapply` equivalente al bucle `for` en el ejercicio 1.1.
 
 2.2 Haga un bucle `sapply` equivalente al bucle `for` en el ejercicio 1.1 y ponga el resultado en un cuadro de datos, similiar a lo hecho en el ejercicio 1.2
@@ -751,7 +731,7 @@ Note que los resultados son agrupados en una matrix. 'expr' también puede repli
 2.4 Haga un bucle `tapply` para calcular el error estandar para el ancho de sépalo por especie en el juego de datos 'iris'.
 :::
 
----
+------------------------------------------------------------------------
 
 # Bucles 'repeat'
 
@@ -826,7 +806,6 @@ ggplot(data = cc, aes(x, y)) +
 La condición determina si el ciclo debe detenerse.
 
 Una característica importante de los bucles `while`,`repeat` y `for` es que pueden tomar resultados de iteraciones anteriores como entrada en iteraciones posteriores. Esto se debe a que los objetos creados dentro de la función se guardan en el entorno actual (a diferencia de los bucles `Xapply`).
-
 
 # Bucles 'While'
 
@@ -951,7 +930,7 @@ ggplot(data = cc, aes(x, y)) +
   theme_classic(base_size = 25)
 ```
 
----
+------------------------------------------------------------------------
 
 ::: {.alert .alert-info}
 ## Ejercicio 3
@@ -961,7 +940,7 @@ ggplot(data = cc, aes(x, y)) +
 3.2 Haga un bucle `repeat` que se detenga solo si la correlación es mayor que 0.5 pero menor que 0.55
 :::
 
----
+------------------------------------------------------------------------
 
 ## Referencias
 

@@ -1,21 +1,5 @@
 ---
 title: <font size="7"><b>Funciones</b></font>
-toc: true
-toc-depth: 2
-toc-location: left
-toc-title: Contenidos
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    theme: simplex
-    css: styles.css
-    toc: true
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    link-external-icon: false
-    link-external-newwindow: true  
 ---
 
 ```{=html}
@@ -46,9 +30,7 @@ knitr::opts_chunk$set(
 -   Comprender las características de los principales tipos de argumentos en las funciones
 
 -   Ser capaz de construir funciones propias
-
 :::
-
 
 # Funciones en R
 
@@ -60,10 +42,9 @@ knitr::opts_chunk$set(
 
 -   Las funciones cargadas desde los paquetes (incluido `R` básico) también se pueden modificar y sobrescribir
 
----
+------------------------------------------------------------------------
 
 # Tipos de funciones
-
 
 ## Funciones integradas
 
@@ -214,7 +195,6 @@ letters[3:4]
 
 ```
 
-
  
 
 ::: {.alert .alert-warning}
@@ -301,8 +281,7 @@ Podemos explorar los paquetes disponibles para R en [la página de CRAN](https:/
 1.3 Corra el código de ejemplo de una de sus funciones
 :::
 
-
---- 
+------------------------------------------------------------------------
 
 # Estructura básica
 
@@ -315,14 +294,12 @@ knitr::include_graphics("./images/funcion.png")
 
 <font size="2">\* Modificado de <i>Wickham et al. 2016</i></font>
 
-
 Podemos observar la estructura de funciones ya cargadas en nuestro entorno de `R`. Para ver el código simplemente corra al nombre de la función en `R` (sin el paréntesis). Por ejemplo, el código de la función `sd()` se puede mostrar de la siguiente manera:
 
 ```{r, eval = T}
 
 sd
 ```
-
 
 En `Rstudio`, el código también se puede mostrar usando *F2* cuando el cursor está en el nombre de la función.
 
@@ -456,7 +433,7 @@ knitr::include_graphics("./images/argumentos.png")
 
  
 
-Permiten a los usuarios ingresar objetos en la función. Los valores proporcionados en los argumentos son utilizados en el cuerpo de la función para hacer los cálculos necesarios. 
+Permiten a los usuarios ingresar objetos en la función. Los valores proporcionados en los argumentos son utilizados en el cuerpo de la función para hacer los cálculos necesarios.
 
 ```{mermaid}
 
@@ -476,8 +453,6 @@ flowchart LR
     style Cuerpo fill:#BEBEBE1A
 
 ```
-
-
 
 Los argumentos pueden o no tener valores predeterminados. Cuando los argumentos tienen valores predeterminados, no es necesario proporcionarlos:
 
@@ -615,7 +590,6 @@ El cuerpo de una función puede contener:
 -   Manipulación de datos
 
 -   Definición de resultados
-
 
 El cuerpo de la función puede tomar el mismo tipo de código utilizado en cualquier rutina de `R`. Sin embargo, los objetos creados no estarán disponibles en el entorno.
 
@@ -814,7 +788,7 @@ if (valor_logico) {
 
 La parte dentro de los paréntesis justo después de `if` es la evaluación lógica.
 
-Estos operadores son utilizados en el cuerpo de la función cuando esta lleva un argumento lógico. 
+Estos operadores son utilizados en el cuerpo de la función cuando esta lleva un argumento lógico.
 
 ```{mermaid}
 
@@ -890,7 +864,7 @@ fcn_1(1, 2, -1)
 ```
 :::
 
----
+------------------------------------------------------------------------
 
 # Ventajas de usar funciones
 
@@ -1011,7 +985,7 @@ Esto ya debería ser obvio a este punto.
 -   Agregar descripciones a cada uno de los argumentos que toma  
 -   Función de prueba con diferentes valores/escenarios
 
----
+------------------------------------------------------------------------
 
 ::: {.alert .alert-info}
 ## Ejercicio 5
@@ -1037,7 +1011,7 @@ Esto ya debería ser obvio a este punto.
 
  
 
----
+------------------------------------------------------------------------
 
 ## Lecturas adicionales
 
@@ -1047,13 +1021,13 @@ Esto ya debería ser obvio a este punto.
 
 -   <a href="http://cran.r-project.org/doc/manuals/R-intro.html#Writing-your-own-R-intro.html#Writing-your-own-functions">The official R intro material on writing your own functions</a> (ir a "Writing your own function")
 
----
+------------------------------------------------------------------------
 
 ## Referencias
 
 -   Wickham, Hadley, and Garrett Grolemund. 2016. *R for data science: import, tidy, transform, visualize, and model data*. [website](http://r4ds.had.co.nz)
 
----
+------------------------------------------------------------------------
 
 <font size="4">Información de la sesión</font>
 
