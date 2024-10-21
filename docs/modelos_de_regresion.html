@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -203,6 +203,10 @@ window.Quarto = {
     <a class="dropdown-item" href="./tarea4.html">
  <span class="dropdown-text">Tarea 4</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./solucion_tarea4.html">
+ <span class="dropdown-text">Solucion tarea 4</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -277,7 +281,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">6 de octubre de 2024</p>
+      <p class="date">21 de octubre de 2024</p>
     </div>
   </div>
   
@@ -2712,9 +2716,9 @@ x1            1.3166     0.1151 290.0679 11.4395 2.9326e-25</code></pre>
 <h1 class="unnumbered unlisted">Información de la sesión</h1>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
@@ -2722,11 +2726,11 @@ LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
 
 locale:
  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [3] LC_TIME=es_CR.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=es_CR.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=es_CR.UTF-8       LC_NAME=C                 
  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+[11] LC_MEASUREMENT=es_CR.UTF-8 LC_IDENTIFICATION=C       
 
 time zone: America/Costa_Rica
 tzcode source: system (glibc)
@@ -2735,37 +2739,32 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] car_3.1-2         carData_3.0-5     sjPlot_2.8.15     lmerTest_3.1-3   
- [5] lme4_1.1-35.3     Matrix_1.6-5      viridis_0.6.5     viridisLite_0.4.2
+ [1] car_3.1-2         carData_3.0-5     sjPlot_2.8.16     lmerTest_3.1-3   
+ [5] lme4_1.1-35.5     Matrix_1.7-0      viridis_0.6.5     viridisLite_0.4.2
  [9] ggplot2_3.5.1     knitr_1.48       
 
 loaded via a namespace (and not attached):
- [1] sjlabelled_1.2.0    tidyselect_1.2.1    farver_2.1.2       
- [4] dplyr_1.1.4         fastmap_1.2.0       TH.data_1.1-2      
- [7] bayestestR_0.13.1   sjstats_0.18.2      digest_0.6.37      
-[10] estimability_1.4.1  lifecycle_1.0.4     survival_3.2-13    
-[13] magrittr_2.0.3      compiler_4.3.2      rlang_1.1.4        
-[16] tools_4.3.2         utf8_1.2.4          yaml_2.3.10        
-[19] labeling_0.4.3      htmlwidgets_1.6.4   multcomp_1.4-25    
-[22] abind_1.4-8         withr_3.0.1         purrr_1.0.2        
-[25] numDeriv_2016.8-1.1 grid_4.3.2          fansi_1.0.6        
-[28] xtable_1.8-4        colorspace_2.1-1    emmeans_1.9.0      
-[31] scales_1.3.0        MASS_7.3-55         insight_0.19.11    
-[34] cli_3.6.3           mvtnorm_1.3-1       rmarkdown_2.28     
-[37] crayon_1.5.3        generics_0.1.3      remotes_2.5.0      
-[40] rstudioapi_0.16.0   performance_0.10.8  modelr_0.1.11      
-[43] minqa_1.2.7         stringr_1.5.1       splines_4.3.2      
-[46] vctrs_0.6.5         boot_1.3-28         sandwich_3.1-0     
-[49] jsonlite_1.8.9      packrat_0.9.2       tidyr_1.3.1        
-[52] glue_1.8.0          nloptr_2.0.3        codetools_0.2-18   
-[55] xaringanExtra_0.8.0 stringi_1.8.4       gtable_0.3.5       
-[58] ggeffects_1.3.4     munsell_0.5.1       tibble_3.2.1       
-[61] pillar_1.9.0        htmltools_0.5.8.1   R6_2.5.1           
-[64] evaluate_1.0.0      lattice_0.20-45     backports_1.5.0    
-[67] broom_1.0.5         sketchy_1.0.3       Rcpp_1.0.13        
-[70] coda_0.19-4.1       gridExtra_2.3       nlme_3.1-155       
-[73] mgcv_1.8-39         xfun_0.47           zoo_1.8-12         
-[76] sjmisc_2.8.9        pkgconfig_2.0.3    </code></pre>
+ [1] gtable_0.3.5        xfun_0.48           htmlwidgets_1.6.4  
+ [4] remotes_2.5.0       insight_0.20.2      lattice_0.22-6     
+ [7] numDeriv_2016.8-1.1 vctrs_0.6.5         tools_4.4.1        
+[10] sjstats_0.19.0      generics_0.1.3      datawizard_0.12.1  
+[13] tibble_3.2.1        fansi_1.0.6         pkgconfig_2.0.3    
+[16] ggeffects_1.7.0     lifecycle_1.0.4     farver_2.1.2       
+[19] compiler_4.4.1      stringr_1.5.1       sjmisc_2.8.10      
+[22] munsell_0.5.1       sketchy_1.0.3       htmltools_0.5.8.1  
+[25] yaml_2.3.10         pillar_1.9.0        nloptr_2.1.1       
+[28] crayon_1.5.3        tidyr_1.3.1         MASS_7.3-61        
+[31] boot_1.3-30         abind_1.4-8         nlme_3.1-165       
+[34] tidyselect_1.2.1    sjlabelled_1.2.0    packrat_0.9.2      
+[37] digest_0.6.37       performance_0.12.2  stringi_1.8.4      
+[40] dplyr_1.1.4         purrr_1.0.2         labeling_0.4.3     
+[43] splines_4.4.1       fastmap_1.2.0       grid_4.4.1         
+[46] colorspace_2.1-1    cli_3.6.3           magrittr_2.0.3     
+[49] utf8_1.2.4          withr_3.0.1         scales_1.3.0       
+[52] rmarkdown_2.28      gridExtra_2.3       evaluate_1.0.1     
+[55] mgcv_1.9-1          rlang_1.1.4         Rcpp_1.0.13        
+[58] glue_1.8.0          xaringanExtra_0.8.0 rstudioapi_0.16.0  
+[61] minqa_1.2.7         jsonlite_1.8.9      R6_2.5.1           </code></pre>
 </div>
 </div>
 
@@ -2916,6 +2915,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -2957,7 +2961,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

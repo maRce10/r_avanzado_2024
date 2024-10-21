@@ -528,7 +528,7 @@ n_sp_df$profundidad <-
 
  
 
-1.6 ¿Cuál es la correlación entre el número de familias y la profundidad?
+1.6 ¿Cuál es la correlación entre el número de familias y la profundidad? (Utilice el data frame generado para responder esta pregunta)
 
 ```{r, eval = FALSE, echo = FALSE}
 cor(n_sp_df$profundidad, n_sp_df$familias)

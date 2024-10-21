@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -177,6 +177,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./tarea4.html">
  <span class="dropdown-text">Tarea 4</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./solucion_tarea4.html">
+ <span class="dropdown-text">Solucion tarea 4</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -252,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">10 de octubre de 2024</p>
+      <p class="date">21 de octubre de 2024</p>
     </div>
   </div>
   
@@ -856,7 +860,7 @@ flowchart LR
 </div>
 <p>1.5 ¿Cuál es la correlación entre el número de especies observadas (que es igual al número de filas) y la profundidad? (pista: <code>cor.test()</code>)</p>
 <p>&nbsp;</p>
-<p>1.6 ¿Cuál es la correlación entre el número de familias y la profundidad?</p>
+<p>1.6 ¿Cuál es la correlación entre el número de familias y la profundidad? (Utilice el data frame generado para responder esta pregunta)</p>
 <p>&nbsp;</p>
 </div>
 <p>El bucle <code>for</code> también puede ser usado para juntar todas los datos de los archivos de texto en un solo cuadro de datos. Esto lo podemos hacer “rellenando” un cuadro de datos vacío, de forma análoga a como rellenamos un vector vació anteriormente:</p>
@@ -896,8 +900,9 @@ flowchart LR
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">apropos</span>(<span class="st">"apply$"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "apply"      "dendrapply" "eapply"     "kernapply"  "lapply"    
- [6] "mapply"     "rapply"     "sapply"     "tapply"     "vapply"    </code></pre>
+<pre><code> [1] ".mapply"    "apply"      "dendrapply" "eapply"     "kernapply" 
+ [6] "lapply"     "mapply"     "rapply"     "sapply"     "tapply"    
+[11] "vapply"    </code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1114,17 +1119,17 @@ flowchart LR
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">replicate</span>(<span class="at">n =</span> <span class="dv">3</span>, <span class="at">expr =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>           [,1]      [,2]     [,3]
- [1,]  0.125649 -1.232198  0.53135
- [2,] -0.072318  0.092086 -0.20531
- [3,] -0.809933  0.324523  0.78628
- [4,] -0.250549 -0.395244  0.36273
- [5,] -1.228559  0.057767 -0.95553
- [6,] -0.418606  0.249993  1.64233
- [7,]  1.547500  0.551959 -0.37184
- [8,]  0.351201  2.318075  0.60681
- [9,]  0.704201 -1.912570  0.80175
-[10,]  0.660424 -0.941735 -0.54960</code></pre>
+<pre><code>          [,1]     [,2]      [,3]
+ [1,] -0.72614 -0.30553  0.201138
+ [2,]  0.83462 -0.36140 -0.697412
+ [3,]  0.59565 -0.52599 -0.930612
+ [4,]  0.74794 -0.89728 -3.210432
+ [5,]  0.45358  0.72666  0.095507
+ [6,] -0.12418  0.31161  1.069970
+ [7,] -0.51789 -0.41523 -0.049212
+ [8,]  0.30029 -0.37562  0.608052
+ [9,] -0.16467  0.72777  0.137510
+[10,]  0.36377  0.10799  1.338817</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1197,7 +1202,7 @@ flowchart LR
 <span id="cb44-21"><a href="#cb44-21"></a><span class="fu">head</span>(cc_vector)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  0.153813  0.050493  0.364930 -0.179887  0.085326 -0.095688</code></pre>
+<pre><code>[1]  0.0784548 -0.3772153  0.0069091  0.5792859</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1343,9 +1348,9 @@ flowchart LR
 <p><font size="5">Session information</font></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
@@ -1353,11 +1358,11 @@ LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
 
 locale:
  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [3] LC_TIME=es_CR.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=es_CR.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=es_CR.UTF-8       LC_NAME=C                 
  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+[11] LC_MEASUREMENT=es_CR.UTF-8 LC_IDENTIFICATION=C       
 
 time zone: America/Costa_Rica
 tzcode source: system (glibc)
@@ -1370,14 +1375,14 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] vctrs_0.6.5       cli_3.6.3         knitr_1.48        rlang_1.1.4      
- [5] xfun_0.47         generics_0.1.3    jsonlite_1.8.9    labeling_0.4.3   
+ [5] xfun_0.48         generics_0.1.3    jsonlite_1.8.9    labeling_0.4.3   
  [9] glue_1.8.0        colorspace_2.1-1  htmltools_0.5.8.1 scales_1.3.0     
-[13] fansi_1.0.6       rmarkdown_2.28    grid_4.3.2        evaluate_1.0.0   
+[13] fansi_1.0.6       rmarkdown_2.28    grid_4.4.1        evaluate_1.0.1   
 [17] munsell_0.5.1     tibble_3.2.1      fastmap_1.2.0     yaml_2.3.10      
-[21] lifecycle_1.0.4   compiler_4.3.2    dplyr_1.1.4       htmlwidgets_1.6.4
+[21] lifecycle_1.0.4   compiler_4.4.1    dplyr_1.1.4       htmlwidgets_1.6.4
 [25] pkgconfig_2.0.3   rstudioapi_0.16.0 farver_2.1.2      digest_0.6.37    
 [29] R6_2.5.1          tidyselect_1.2.1  utf8_1.2.4        pillar_1.9.0     
-[33] magrittr_2.0.3    withr_3.0.1       tools_4.3.2       gtable_0.3.5     </code></pre>
+[33] magrittr_2.0.3    withr_3.0.1       tools_4.4.1       gtable_0.3.5     </code></pre>
 </div>
 </div>
 
@@ -1529,6 +1534,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -1570,7 +1580,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -2357,7 +2371,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb52-545"><a href="#cb52-545" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb52-546"><a href="#cb52-546" aria-hidden="true" tabindex="-1"></a>&nbsp;</span>
 <span id="cb52-547"><a href="#cb52-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-548"><a href="#cb52-548" aria-hidden="true" tabindex="-1"></a>1.6 ¿Cuál es la correlación entre el número de familias y la profundidad?</span>
+<span id="cb52-548"><a href="#cb52-548" aria-hidden="true" tabindex="-1"></a>1.6 ¿Cuál es la correlación entre el número de familias y la profundidad? (Utilice el data frame generado para responder esta pregunta)</span>
 <span id="cb52-549"><a href="#cb52-549" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb52-550"><a href="#cb52-550" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE, echo = FALSE}</span></span>
 <span id="cb52-551"><a href="#cb52-551" aria-hidden="true" tabindex="-1"></a><span class="in">cor(n_sp_df$profundidad, n_sp_df$familias)</span></span>

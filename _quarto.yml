@@ -41,6 +41,8 @@ website:
         menu:
         - text: "Tarea 4"
           href: tarea4.qmd
+        - text: "Solucion tarea 4"
+          href: solucion_tarea4.qmd
         # - text: "Tarea 5"
         #   href: tarea5.qmd
         # - text: "Solución Tarea 5"
