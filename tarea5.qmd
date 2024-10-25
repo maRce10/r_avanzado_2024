@@ -4,6 +4,7 @@ format:
   html:
     code-tools: false
     code-line-numbers: false
+    embed-resources: true
 ---
 
 ```{r,echo=FALSE,message=FALSE}
@@ -147,7 +148,7 @@ n_familias <- sapply(unique(datos_camaras$archivo), function(x){
   n_fams <- length(unique(Y$Family))
 
   return(n_fams)
-  })
+  }, USE.NAMES = FALSE)
 
 cam_dat <- data.frame(archivo = basename(unique(datos_camaras$archivo)), n_familias = n_familias, row.names = 1:length(n_familias))
 
@@ -165,7 +166,7 @@ cam_dat$n_generos <- sapply(unique(datos_camaras$archivo), function(x){
   n_fams <- length(unique(Y$Genus))
 
   return(n_fams)
-  })
+  }, USE.NAMES = FALSE)
 
 head(cam_dat, 3)
 ```
@@ -181,7 +182,7 @@ cam_dat$date <- sapply(unique(datos_camaras$archivo), function(x){
   date <- unique(Y$Date)
 
   return(date)
-  })
+  }, USE.NAMES = FALSE)
 
 head(cam_dat, 3)
 ```
@@ -197,7 +198,7 @@ n_obs <- sapply(unique(datos_camaras$Species), function(x){
   obs <- sum(X$MaxN)
   
   return(obs)
-})
+}, USE.NAMES = FALSE)
 
 
 sp_dat <- data.frame(spp = unique(datos_camaras$Species), n_obs)
@@ -223,7 +224,7 @@ sp_dat$min_prof <- sapply(sp_dat$spp, function(x){
   min_prf <- min(X$Depth, na.rm = TRUE)
   
   return(min_prf)
-})
+}, USE.NAMES = FALSE)
 
 sp_dat$max_prof <- sapply(sp_dat$spp, function(x){
   
@@ -232,7 +233,7 @@ sp_dat$max_prof <- sapply(sp_dat$spp, function(x){
   max_prf <- max(X$Depth, na.rm = TRUE)
   
   return(max_prf)
-})
+}, USE.NAMES = FALSE)
 
 head(sp_dat, 3)
 
@@ -249,7 +250,7 @@ sp_dat$rango_prof <- sapply(sp_dat$spp, function(x){
   max_prf <- max(X$Depth, na.rm = TRUE)
   
   return(max_prf)
-})
+}, USE.NAMES = FALSE)
 
 sp_dat$rango_prof <- sp_dat$max_prof - sp_dat$min_prof
 
