@@ -43,8 +43,8 @@ website:
           href: tarea4.qmd
         - text: "Solucion tarea 4"
           href: solucion_tarea4.qmd
-        # - text: "Tarea 5"
-        #   href: tarea5.qmd
+        - text: "Tarea 5"
+          href: tarea5.qmd
         # - text: "Solución Tarea 5"
         #   href: respuestas_tarea5.qmd
       - text: "Preparación para el curso"

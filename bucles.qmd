@@ -762,7 +762,7 @@ El siguiente bucle `repeat` se ejecuta hasta que la correlación de las variable
 ```{r, eval=T, echo=T}
 
 # crear vector vacio
-cc_vector <- NULL
+cc_vector <- vector()
 
 repeat{
   # generar la variable 1
@@ -790,15 +790,14 @@ Podemos graficarlo el resultado asi así:
 
 ```{r, eval=T, echo=T}
 
-
-
+# poner en un data frame
 cc <- data.frame(y = cc_vector, x = 1:length(cc_vector))
 
 ggplot(data = cc, aes(x, y)) +
   geom_hline(yintercept = 0.5,
-             col = cols[4],
+             col = "#FDAE61",
              lwd = 3) +
-  geom_line(col = cols[8], lwd = 4) +
+  geom_line(col = "#66C2A5", lwd = 4) +
   labs(x = "Iteraciones", y = "Correlación de pearson (r)") +
   theme_classic(base_size = 25)
 ```
@@ -844,11 +843,13 @@ while (corr_coef < 0.5) {
   # generar la variable 2
   v2 <- rnorm(n = 20, mean = 100, sd = 20)
 
+  
   # corrrer  la correlacion
   corr_coef <- cor(v1, v2)
 
-  # imprimir
-  print(corr_coef)
+  # guardar resultados
+  cc_vector[length(cc_vector) + 1] <- corr_coef
+  
 }
 
 corr_coef
@@ -856,9 +857,12 @@ corr_coef
 
 ```{r, eval=T, echo=F}
 
-# set default value as 0
+# definir valor inicial
 corr_coef <- 0
-cc <- NULL
+
+# crear vector vacio
+cc_vector <- vector()
+
 while (corr_coef < 0.5) {
   set.seed(length(cc) + 1)
 
@@ -892,7 +896,7 @@ Con un pequeño ajuste, un bucle `while` también puede evaluar varias condicion
 corr_coef <- 0
 
 # crear vector vacio
-cc_vector <- NULL
+cc_vector <- vector()
 
 while (corr_coef < 0.5 & corr_coef > -0.5) {
   # generar la variable 1

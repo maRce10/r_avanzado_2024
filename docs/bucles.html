@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -181,6 +181,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./solucion_tarea4.html">
  <span class="dropdown-text">Solucion tarea 4</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./tarea5.html">
+ <span class="dropdown-text">Tarea 5</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -256,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">21 de octubre de 2024</p>
+      <p class="date">24 de octubre de 2024</p>
     </div>
   </div>
   
@@ -900,9 +904,8 @@ flowchart LR
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">apropos</span>(<span class="st">"apply$"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] ".mapply"    "apply"      "dendrapply" "eapply"     "kernapply" 
- [6] "lapply"     "mapply"     "rapply"     "sapply"     "tapply"    
-[11] "vapply"    </code></pre>
+<pre><code> [1] "apply"      "dendrapply" "eapply"     "kernapply"  "lapply"    
+ [6] "mapply"     "rapply"     "sapply"     "tapply"     "vapply"    </code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1119,17 +1122,17 @@ flowchart LR
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">replicate</span>(<span class="at">n =</span> <span class="dv">3</span>, <span class="at">expr =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>          [,1]     [,2]      [,3]
- [1,] -0.72614 -0.30553  0.201138
- [2,]  0.83462 -0.36140 -0.697412
- [3,]  0.59565 -0.52599 -0.930612
- [4,]  0.74794 -0.89728 -3.210432
- [5,]  0.45358  0.72666  0.095507
- [6,] -0.12418  0.31161  1.069970
- [7,] -0.51789 -0.41523 -0.049212
- [8,]  0.30029 -0.37562  0.608052
- [9,] -0.16467  0.72777  0.137510
-[10,]  0.36377  0.10799  1.338817</code></pre>
+<pre><code>           [,1]     [,2]      [,3]
+ [1,] -0.551784  0.93318 -1.645104
+ [2,]  0.481300  0.84994 -0.869838
+ [3,] -1.073957 -1.83684  0.160891
+ [4,] -0.820394 -0.20550  0.084014
+ [5,] -1.113492 -1.65319 -0.319242
+ [6,]  1.137027  0.90619 -1.298977
+ [7,]  0.556740 -0.28757  0.825499
+ [8,] -0.506969  0.51991 -0.743259
+ [9,] -0.057364 -0.60575 -0.270880
+[10,] -0.270253  1.45479 -0.066871</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1180,7 +1183,7 @@ flowchart LR
 <details open="" class="code-fold">
 <summary>Código</summary>
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="co"># crear vector vacio</span></span>
-<span id="cb44-2"><a href="#cb44-2"></a>cc_vector <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a>cc_vector <span class="ot">&lt;-</span> <span class="fu">vector</span>()</span>
 <span id="cb44-3"><a href="#cb44-3"></a></span>
 <span id="cb44-4"><a href="#cb44-4"></a><span class="cf">repeat</span>{</span>
 <span id="cb44-5"><a href="#cb44-5"></a>  <span class="co"># generar la variable 1</span></span>
@@ -1202,7 +1205,7 @@ flowchart LR
 <span id="cb44-21"><a href="#cb44-21"></a><span class="fu">head</span>(cc_vector)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  0.0784548 -0.3772153  0.0069091  0.5792859</code></pre>
+<pre><code>[1]  0.0086294  0.0783378  0.3214805  0.0156626 -0.0830365  0.0088494</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1210,15 +1213,16 @@ flowchart LR
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Código</summary>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y =</span> cc_vector, <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(cc_vector))</span>
-<span id="cb46-2"><a href="#cb46-2"></a></span>
-<span id="cb46-3"><a href="#cb46-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> cc, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb46-4"><a href="#cb46-4"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.5</span>,</span>
-<span id="cb46-5"><a href="#cb46-5"></a>             <span class="at">col =</span> cols[<span class="dv">4</span>],</span>
-<span id="cb46-6"><a href="#cb46-6"></a>             <span class="at">lwd =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb46-7"><a href="#cb46-7"></a>  <span class="fu">geom_line</span>(<span class="at">col =</span> cols[<span class="dv">8</span>], <span class="at">lwd =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb46-8"><a href="#cb46-8"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Iteraciones"</span>, <span class="at">y =</span> <span class="st">"Correlación de pearson (r)"</span>) <span class="sc">+</span></span>
-<span id="cb46-9"><a href="#cb46-9"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">25</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="co"># poner en un data frame</span></span>
+<span id="cb46-2"><a href="#cb46-2"></a>cc <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y =</span> cc_vector, <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(cc_vector))</span>
+<span id="cb46-3"><a href="#cb46-3"></a></span>
+<span id="cb46-4"><a href="#cb46-4"></a><span class="fu">ggplot</span>(<span class="at">data =</span> cc, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb46-5"><a href="#cb46-5"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.5</span>,</span>
+<span id="cb46-6"><a href="#cb46-6"></a>             <span class="at">col =</span> <span class="st">"#FDAE61"</span>,</span>
+<span id="cb46-7"><a href="#cb46-7"></a>             <span class="at">lwd =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb46-8"><a href="#cb46-8"></a>  <span class="fu">geom_line</span>(<span class="at">col =</span> <span class="st">"#66C2A5"</span>, <span class="at">lwd =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb46-9"><a href="#cb46-9"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Iteraciones"</span>, <span class="at">y =</span> <span class="st">"Correlación de pearson (r)"</span>) <span class="sc">+</span></span>
+<span id="cb46-10"><a href="#cb46-10"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">25</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1275,20 +1279,52 @@ flowchart LR
 <span id="cb47-9"><a href="#cb47-9"></a>  <span class="co"># generar la variable 2</span></span>
 <span id="cb47-10"><a href="#cb47-10"></a>  v2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">20</span>)</span>
 <span id="cb47-11"><a href="#cb47-11"></a></span>
-<span id="cb47-12"><a href="#cb47-12"></a>  <span class="co"># corrrer  la correlacion</span></span>
-<span id="cb47-13"><a href="#cb47-13"></a>  corr_coef <span class="ot">&lt;-</span> <span class="fu">cor</span>(v1, v2)</span>
-<span id="cb47-14"><a href="#cb47-14"></a></span>
-<span id="cb47-15"><a href="#cb47-15"></a>  <span class="co"># imprimir</span></span>
-<span id="cb47-16"><a href="#cb47-16"></a>  <span class="fu">print</span>(corr_coef)</span>
-<span id="cb47-17"><a href="#cb47-17"></a>}</span>
-<span id="cb47-18"><a href="#cb47-18"></a></span>
-<span id="cb47-19"><a href="#cb47-19"></a>corr_coef</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb47-12"><a href="#cb47-12"></a>  </span>
+<span id="cb47-13"><a href="#cb47-13"></a>  <span class="co"># corrrer  la correlacion</span></span>
+<span id="cb47-14"><a href="#cb47-14"></a>  corr_coef <span class="ot">&lt;-</span> <span class="fu">cor</span>(v1, v2)</span>
+<span id="cb47-15"><a href="#cb47-15"></a></span>
+<span id="cb47-16"><a href="#cb47-16"></a>  <span class="co"># guardar resultados</span></span>
+<span id="cb47-17"><a href="#cb47-17"></a>  cc_vector[<span class="fu">length</span>(cc_vector) <span class="sc">+</span> <span class="dv">1</span>] <span class="ot">&lt;-</span> corr_coef</span>
+<span id="cb47-18"><a href="#cb47-18"></a>  </span>
+<span id="cb47-19"><a href="#cb47-19"></a>}</span>
+<span id="cb47-20"><a href="#cb47-20"></a></span>
+<span id="cb47-21"><a href="#cb47-21"></a>corr_coef</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.0872575  0.3865472  0.1199017 -0.2902941  0.2413406 -0.1667497
- [7]  0.1272541  0.0011283 -0.1344395 -0.0184824  0.5966901</code></pre>
+<pre><code>[[1]]
+[1] 0.087257
+
+[[2]]
+[1] 0.38655
+
+[[3]]
+[1] 0.1199
+
+[[4]]
+[1] -0.29029
+
+[[5]]
+[1] 0.24134
+
+[[6]]
+[1] -0.16675
+
+[[7]]
+[1] 0.12725
+
+[[8]]
+[1] 0.0011283
+
+[[9]]
+[1] -0.13444
+
+[[10]]
+[1] -0.018482
+
+[[11]]
+[1] 0.59669</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1300,7 +1336,7 @@ flowchart LR
 <span id="cb49-2"><a href="#cb49-2"></a>corr_coef <span class="ot">&lt;-</span> <span class="dv">0</span></span>
 <span id="cb49-3"><a href="#cb49-3"></a></span>
 <span id="cb49-4"><a href="#cb49-4"></a><span class="co"># crear vector vacio</span></span>
-<span id="cb49-5"><a href="#cb49-5"></a>cc_vector <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb49-5"><a href="#cb49-5"></a>cc_vector <span class="ot">&lt;-</span> <span class="fu">vector</span>()</span>
 <span id="cb49-6"><a href="#cb49-6"></a></span>
 <span id="cb49-7"><a href="#cb49-7"></a><span class="cf">while</span> (corr_coef <span class="sc">&lt;</span> <span class="fl">0.5</span> <span class="sc">&amp;</span> corr_coef <span class="sc">&gt;</span> <span class="sc">-</span><span class="fl">0.5</span>) {</span>
 <span id="cb49-8"><a href="#cb49-8"></a>  <span class="co"># generar la variable 1</span></span>
@@ -1348,9 +1384,9 @@ flowchart LR
 <p><font size="5">Session information</font></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.1 (2024-06-14)
-Platform: x86_64-pc-linux-gnu
-Running under: Ubuntu 22.04.4 LTS
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.2 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
@@ -1358,11 +1394,11 @@ LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
 
 locale:
  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=es_CR.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=es_CR.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=es_CR.UTF-8       LC_NAME=C                 
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=es_CR.UTF-8 LC_IDENTIFICATION=C       
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 time zone: America/Costa_Rica
 tzcode source: system (glibc)
@@ -1375,14 +1411,14 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] vctrs_0.6.5       cli_3.6.3         knitr_1.48        rlang_1.1.4      
- [5] xfun_0.48         generics_0.1.3    jsonlite_1.8.9    labeling_0.4.3   
+ [5] xfun_0.47         generics_0.1.3    jsonlite_1.8.9    labeling_0.4.3   
  [9] glue_1.8.0        colorspace_2.1-1  htmltools_0.5.8.1 scales_1.3.0     
-[13] fansi_1.0.6       rmarkdown_2.28    grid_4.4.1        evaluate_1.0.1   
+[13] fansi_1.0.6       rmarkdown_2.28    grid_4.3.2        evaluate_1.0.0   
 [17] munsell_0.5.1     tibble_3.2.1      fastmap_1.2.0     yaml_2.3.10      
-[21] lifecycle_1.0.4   compiler_4.4.1    dplyr_1.1.4       htmlwidgets_1.6.4
+[21] lifecycle_1.0.4   compiler_4.3.2    dplyr_1.1.4       htmlwidgets_1.6.4
 [25] pkgconfig_2.0.3   rstudioapi_0.16.0 farver_2.1.2      digest_0.6.37    
 [29] R6_2.5.1          tidyselect_1.2.1  utf8_1.2.4        pillar_1.9.0     
-[33] magrittr_2.0.3    withr_3.0.1       tools_4.4.1       gtable_0.3.5     </code></pre>
+[33] magrittr_2.0.3    withr_3.0.1       tools_4.3.2       gtable_0.3.5     </code></pre>
 </div>
 </div>
 
@@ -1534,11 +1570,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -1580,11 +1611,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -2601,7 +2628,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb52-785"><a href="#cb52-785" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=T, echo=T}</span></span>
 <span id="cb52-786"><a href="#cb52-786" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb52-787"><a href="#cb52-787" aria-hidden="true" tabindex="-1"></a><span class="in"># crear vector vacio</span></span>
-<span id="cb52-788"><a href="#cb52-788" aria-hidden="true" tabindex="-1"></a><span class="in">cc_vector &lt;- NULL</span></span>
+<span id="cb52-788"><a href="#cb52-788" aria-hidden="true" tabindex="-1"></a><span class="in">cc_vector &lt;- vector()</span></span>
 <span id="cb52-789"><a href="#cb52-789" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb52-790"><a href="#cb52-790" aria-hidden="true" tabindex="-1"></a><span class="in">repeat{</span></span>
 <span id="cb52-791"><a href="#cb52-791" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 1</span></span>
@@ -2629,170 +2656,174 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb52-813"><a href="#cb52-813" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb52-814"><a href="#cb52-814" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=T, echo=T}</span></span>
 <span id="cb52-815"><a href="#cb52-815" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-816"><a href="#cb52-816" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-817"><a href="#cb52-817" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-818"><a href="#cb52-818" aria-hidden="true" tabindex="-1"></a><span class="in">cc &lt;- data.frame(y = cc_vector, x = 1:length(cc_vector))</span></span>
-<span id="cb52-819"><a href="#cb52-819" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-820"><a href="#cb52-820" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = cc, aes(x, y)) +</span></span>
-<span id="cb52-821"><a href="#cb52-821" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_hline(yintercept = 0.5,</span></span>
-<span id="cb52-822"><a href="#cb52-822" aria-hidden="true" tabindex="-1"></a><span class="in">             col = cols[4],</span></span>
-<span id="cb52-823"><a href="#cb52-823" aria-hidden="true" tabindex="-1"></a><span class="in">             lwd = 3) +</span></span>
-<span id="cb52-824"><a href="#cb52-824" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_line(col = cols[8], lwd = 4) +</span></span>
-<span id="cb52-825"><a href="#cb52-825" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(x = "Iteraciones", y = "Correlación de pearson (r)") +</span></span>
-<span id="cb52-826"><a href="#cb52-826" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_classic(base_size = 25)</span></span>
-<span id="cb52-827"><a href="#cb52-827" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb52-828"><a href="#cb52-828" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-829"><a href="#cb52-829" aria-hidden="true" tabindex="-1"></a>La condición determina si el ciclo debe detenerse.</span>
-<span id="cb52-830"><a href="#cb52-830" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-831"><a href="#cb52-831" aria-hidden="true" tabindex="-1"></a>Una característica importante de los bucles <span class="in">`while`</span>,<span class="in">`repeat`</span> y <span class="in">`for`</span> es que pueden tomar resultados de iteraciones anteriores como entrada en iteraciones posteriores. Esto se debe a que los objetos creados dentro de la función se guardan en el entorno actual (a diferencia de los bucles <span class="in">`Xapply`</span>).</span>
-<span id="cb52-832"><a href="#cb52-832" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-833"><a href="#cb52-833" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bucles 'While'</span></span>
-<span id="cb52-834"><a href="#cb52-834" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-835"><a href="#cb52-835" aria-hidden="true" tabindex="-1"></a>Los bucles <span class="in">`while`</span> aplican una acción en una secuencia de elementos hasta que se cumpla una condición. Son muy parecidos a los bucles <span class="in">`repeat`</span>. La condición puede evaluar un resultado del propio bucle o una entrada externa:</span>
-<span id="cb52-836"><a href="#cb52-836" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-839"><a href="#cb52-839" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb52-840"><a href="#cb52-840" aria-hidden="true" tabindex="-1"></a><span class="in">flowchart LR</span></span>
-<span id="cb52-841"><a href="#cb52-841" aria-hidden="true" tabindex="-1"></a><span class="in">    classDef largeText font-size:18px, padding:15px;</span></span>
-<span id="cb52-842"><a href="#cb52-842" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-843"><a href="#cb52-843" aria-hidden="true" tabindex="-1"></a><span class="in">    A("Inicio del bucle") --&gt; B("¿Se cumple la condición?")</span></span>
-<span id="cb52-844"><a href="#cb52-844" aria-hidden="true" tabindex="-1"></a><span class="in">    B -- Sí --&gt; C(Realizar tarea)</span></span>
-<span id="cb52-845"><a href="#cb52-845" aria-hidden="true" tabindex="-1"></a><span class="in">    C --&gt; D(Guardar resultado)</span></span>
-<span id="cb52-846"><a href="#cb52-846" aria-hidden="true" tabindex="-1"></a><span class="in">    D --&gt; F(Modifica objeto evaluado)</span></span>
-<span id="cb52-847"><a href="#cb52-847" aria-hidden="true" tabindex="-1"></a><span class="in">    F --&gt; B</span></span>
-<span id="cb52-848"><a href="#cb52-848" aria-hidden="true" tabindex="-1"></a><span class="in">    B -- No --&gt; E(Fin del bucle)</span></span>
-<span id="cb52-849"><a href="#cb52-849" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-850"><a href="#cb52-850" aria-hidden="true" tabindex="-1"></a><span class="in">    style A fill:#28192F66, stroke:#000, stroke-width:2px, color:#FFF</span></span>
-<span id="cb52-851"><a href="#cb52-851" aria-hidden="true" tabindex="-1"></a><span class="in">    style B fill:#40498E66, stroke:#000, stroke-width:2px, color:#FFF</span></span>
-<span id="cb52-852"><a href="#cb52-852" aria-hidden="true" tabindex="-1"></a><span class="in">    style C fill:#348AA666, stroke:#000, stroke-width:2px, color:#FFF</span></span>
-<span id="cb52-853"><a href="#cb52-853" aria-hidden="true" tabindex="-1"></a><span class="in">    style D fill:#357BA266, stroke:#000, stroke-width:2px, color:#FFF</span></span>
-<span id="cb52-854"><a href="#cb52-854" aria-hidden="true" tabindex="-1"></a><span class="in">    style D fill:#49C1AD66, stroke:#000, stroke-width:2px, color:#FFF</span></span>
-<span id="cb52-855"><a href="#cb52-855" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-856"><a href="#cb52-856" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb52-857"><a href="#cb52-857" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-858"><a href="#cb52-858" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=F, echo=T}</span></span>
-<span id="cb52-859"><a href="#cb52-859" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-860"><a href="#cb52-860" aria-hidden="true" tabindex="-1"></a><span class="in"># definir valor inicial</span></span>
-<span id="cb52-861"><a href="#cb52-861" aria-hidden="true" tabindex="-1"></a><span class="in">corr_coef &lt;- 0</span></span>
-<span id="cb52-862"><a href="#cb52-862" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-863"><a href="#cb52-863" aria-hidden="true" tabindex="-1"></a><span class="in"># iniciar bucle</span></span>
-<span id="cb52-864"><a href="#cb52-864" aria-hidden="true" tabindex="-1"></a><span class="in">while (corr_coef &lt; 0.5) {</span></span>
-<span id="cb52-865"><a href="#cb52-865" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 1</span></span>
-<span id="cb52-866"><a href="#cb52-866" aria-hidden="true" tabindex="-1"></a><span class="in">  v1 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
-<span id="cb52-867"><a href="#cb52-867" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-868"><a href="#cb52-868" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 2</span></span>
-<span id="cb52-869"><a href="#cb52-869" aria-hidden="true" tabindex="-1"></a><span class="in">  v2 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
-<span id="cb52-870"><a href="#cb52-870" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-816"><a href="#cb52-816" aria-hidden="true" tabindex="-1"></a><span class="in"># poner en un data frame</span></span>
+<span id="cb52-817"><a href="#cb52-817" aria-hidden="true" tabindex="-1"></a><span class="in">cc &lt;- data.frame(y = cc_vector, x = 1:length(cc_vector))</span></span>
+<span id="cb52-818"><a href="#cb52-818" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-819"><a href="#cb52-819" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = cc, aes(x, y)) +</span></span>
+<span id="cb52-820"><a href="#cb52-820" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_hline(yintercept = 0.5,</span></span>
+<span id="cb52-821"><a href="#cb52-821" aria-hidden="true" tabindex="-1"></a><span class="in">             col = "#FDAE61",</span></span>
+<span id="cb52-822"><a href="#cb52-822" aria-hidden="true" tabindex="-1"></a><span class="in">             lwd = 3) +</span></span>
+<span id="cb52-823"><a href="#cb52-823" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_line(col = "#66C2A5", lwd = 4) +</span></span>
+<span id="cb52-824"><a href="#cb52-824" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(x = "Iteraciones", y = "Correlación de pearson (r)") +</span></span>
+<span id="cb52-825"><a href="#cb52-825" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_classic(base_size = 25)</span></span>
+<span id="cb52-826"><a href="#cb52-826" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb52-827"><a href="#cb52-827" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-828"><a href="#cb52-828" aria-hidden="true" tabindex="-1"></a>La condición determina si el ciclo debe detenerse.</span>
+<span id="cb52-829"><a href="#cb52-829" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-830"><a href="#cb52-830" aria-hidden="true" tabindex="-1"></a>Una característica importante de los bucles <span class="in">`while`</span>,<span class="in">`repeat`</span> y <span class="in">`for`</span> es que pueden tomar resultados de iteraciones anteriores como entrada en iteraciones posteriores. Esto se debe a que los objetos creados dentro de la función se guardan en el entorno actual (a diferencia de los bucles <span class="in">`Xapply`</span>).</span>
+<span id="cb52-831"><a href="#cb52-831" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-832"><a href="#cb52-832" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bucles 'While'</span></span>
+<span id="cb52-833"><a href="#cb52-833" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-834"><a href="#cb52-834" aria-hidden="true" tabindex="-1"></a>Los bucles <span class="in">`while`</span> aplican una acción en una secuencia de elementos hasta que se cumpla una condición. Son muy parecidos a los bucles <span class="in">`repeat`</span>. La condición puede evaluar un resultado del propio bucle o una entrada externa:</span>
+<span id="cb52-835"><a href="#cb52-835" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-838"><a href="#cb52-838" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb52-839"><a href="#cb52-839" aria-hidden="true" tabindex="-1"></a><span class="in">flowchart LR</span></span>
+<span id="cb52-840"><a href="#cb52-840" aria-hidden="true" tabindex="-1"></a><span class="in">    classDef largeText font-size:18px, padding:15px;</span></span>
+<span id="cb52-841"><a href="#cb52-841" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-842"><a href="#cb52-842" aria-hidden="true" tabindex="-1"></a><span class="in">    A("Inicio del bucle") --&gt; B("¿Se cumple la condición?")</span></span>
+<span id="cb52-843"><a href="#cb52-843" aria-hidden="true" tabindex="-1"></a><span class="in">    B -- Sí --&gt; C(Realizar tarea)</span></span>
+<span id="cb52-844"><a href="#cb52-844" aria-hidden="true" tabindex="-1"></a><span class="in">    C --&gt; D(Guardar resultado)</span></span>
+<span id="cb52-845"><a href="#cb52-845" aria-hidden="true" tabindex="-1"></a><span class="in">    D --&gt; F(Modifica objeto evaluado)</span></span>
+<span id="cb52-846"><a href="#cb52-846" aria-hidden="true" tabindex="-1"></a><span class="in">    F --&gt; B</span></span>
+<span id="cb52-847"><a href="#cb52-847" aria-hidden="true" tabindex="-1"></a><span class="in">    B -- No --&gt; E(Fin del bucle)</span></span>
+<span id="cb52-848"><a href="#cb52-848" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-849"><a href="#cb52-849" aria-hidden="true" tabindex="-1"></a><span class="in">    style A fill:#28192F66, stroke:#000, stroke-width:2px, color:#FFF</span></span>
+<span id="cb52-850"><a href="#cb52-850" aria-hidden="true" tabindex="-1"></a><span class="in">    style B fill:#40498E66, stroke:#000, stroke-width:2px, color:#FFF</span></span>
+<span id="cb52-851"><a href="#cb52-851" aria-hidden="true" tabindex="-1"></a><span class="in">    style C fill:#348AA666, stroke:#000, stroke-width:2px, color:#FFF</span></span>
+<span id="cb52-852"><a href="#cb52-852" aria-hidden="true" tabindex="-1"></a><span class="in">    style D fill:#357BA266, stroke:#000, stroke-width:2px, color:#FFF</span></span>
+<span id="cb52-853"><a href="#cb52-853" aria-hidden="true" tabindex="-1"></a><span class="in">    style D fill:#49C1AD66, stroke:#000, stroke-width:2px, color:#FFF</span></span>
+<span id="cb52-854"><a href="#cb52-854" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-855"><a href="#cb52-855" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb52-856"><a href="#cb52-856" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-857"><a href="#cb52-857" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=F, echo=T}</span></span>
+<span id="cb52-858"><a href="#cb52-858" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-859"><a href="#cb52-859" aria-hidden="true" tabindex="-1"></a><span class="in"># definir valor inicial</span></span>
+<span id="cb52-860"><a href="#cb52-860" aria-hidden="true" tabindex="-1"></a><span class="in">corr_coef &lt;- 0</span></span>
+<span id="cb52-861"><a href="#cb52-861" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-862"><a href="#cb52-862" aria-hidden="true" tabindex="-1"></a><span class="in"># iniciar bucle</span></span>
+<span id="cb52-863"><a href="#cb52-863" aria-hidden="true" tabindex="-1"></a><span class="in">while (corr_coef &lt; 0.5) {</span></span>
+<span id="cb52-864"><a href="#cb52-864" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 1</span></span>
+<span id="cb52-865"><a href="#cb52-865" aria-hidden="true" tabindex="-1"></a><span class="in">  v1 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
+<span id="cb52-866"><a href="#cb52-866" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-867"><a href="#cb52-867" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 2</span></span>
+<span id="cb52-868"><a href="#cb52-868" aria-hidden="true" tabindex="-1"></a><span class="in">  v2 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
+<span id="cb52-869"><a href="#cb52-869" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-870"><a href="#cb52-870" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
 <span id="cb52-871"><a href="#cb52-871" aria-hidden="true" tabindex="-1"></a><span class="in">  # corrrer  la correlacion</span></span>
 <span id="cb52-872"><a href="#cb52-872" aria-hidden="true" tabindex="-1"></a><span class="in">  corr_coef &lt;- cor(v1, v2)</span></span>
 <span id="cb52-873"><a href="#cb52-873" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-874"><a href="#cb52-874" aria-hidden="true" tabindex="-1"></a><span class="in">  # imprimir</span></span>
-<span id="cb52-875"><a href="#cb52-875" aria-hidden="true" tabindex="-1"></a><span class="in">  print(corr_coef)</span></span>
-<span id="cb52-876"><a href="#cb52-876" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb52-877"><a href="#cb52-877" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-878"><a href="#cb52-878" aria-hidden="true" tabindex="-1"></a><span class="in">corr_coef</span></span>
-<span id="cb52-879"><a href="#cb52-879" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb52-880"><a href="#cb52-880" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-881"><a href="#cb52-881" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=T, echo=F}</span></span>
-<span id="cb52-882"><a href="#cb52-882" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-883"><a href="#cb52-883" aria-hidden="true" tabindex="-1"></a><span class="in"># set default value as 0</span></span>
-<span id="cb52-884"><a href="#cb52-884" aria-hidden="true" tabindex="-1"></a><span class="in">corr_coef &lt;- 0</span></span>
-<span id="cb52-885"><a href="#cb52-885" aria-hidden="true" tabindex="-1"></a><span class="in">cc &lt;- NULL</span></span>
-<span id="cb52-886"><a href="#cb52-886" aria-hidden="true" tabindex="-1"></a><span class="in">while (corr_coef &lt; 0.5) {</span></span>
-<span id="cb52-887"><a href="#cb52-887" aria-hidden="true" tabindex="-1"></a><span class="in">  set.seed(length(cc) + 1)</span></span>
-<span id="cb52-888"><a href="#cb52-888" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-889"><a href="#cb52-889" aria-hidden="true" tabindex="-1"></a><span class="in">  # generate variable 1</span></span>
-<span id="cb52-890"><a href="#cb52-890" aria-hidden="true" tabindex="-1"></a><span class="in">  v1 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
-<span id="cb52-891"><a href="#cb52-891" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-892"><a href="#cb52-892" aria-hidden="true" tabindex="-1"></a><span class="in">  set.seed(length(cc) + 100)</span></span>
-<span id="cb52-893"><a href="#cb52-893" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-894"><a href="#cb52-894" aria-hidden="true" tabindex="-1"></a><span class="in">  # generate variable 2</span></span>
-<span id="cb52-895"><a href="#cb52-895" aria-hidden="true" tabindex="-1"></a><span class="in">  v2 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
-<span id="cb52-896"><a href="#cb52-896" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-897"><a href="#cb52-897" aria-hidden="true" tabindex="-1"></a><span class="in">  # run correlation</span></span>
-<span id="cb52-898"><a href="#cb52-898" aria-hidden="true" tabindex="-1"></a><span class="in">  corr_coef &lt;- cor(v1, v2)</span></span>
-<span id="cb52-899"><a href="#cb52-899" aria-hidden="true" tabindex="-1"></a><span class="in">  cc &lt;- append(cc, corr_coef)</span></span>
-<span id="cb52-900"><a href="#cb52-900" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb52-901"><a href="#cb52-901" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-902"><a href="#cb52-902" aria-hidden="true" tabindex="-1"></a><span class="in">if (length(cc) &gt; 10) {</span></span>
-<span id="cb52-903"><a href="#cb52-903" aria-hidden="true" tabindex="-1"></a><span class="in">  cc &lt;- cc[(length(cc) - 10):length(cc)]</span></span>
+<span id="cb52-874"><a href="#cb52-874" aria-hidden="true" tabindex="-1"></a><span class="in">  # guardar resultados</span></span>
+<span id="cb52-875"><a href="#cb52-875" aria-hidden="true" tabindex="-1"></a><span class="in">  cc_vector[length(cc_vector) + 1] &lt;- corr_coef</span></span>
+<span id="cb52-876"><a href="#cb52-876" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb52-877"><a href="#cb52-877" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb52-878"><a href="#cb52-878" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-879"><a href="#cb52-879" aria-hidden="true" tabindex="-1"></a><span class="in">corr_coef</span></span>
+<span id="cb52-880"><a href="#cb52-880" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb52-881"><a href="#cb52-881" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-882"><a href="#cb52-882" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=T, echo=F}</span></span>
+<span id="cb52-883"><a href="#cb52-883" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-884"><a href="#cb52-884" aria-hidden="true" tabindex="-1"></a><span class="in"># definir valor inicial</span></span>
+<span id="cb52-885"><a href="#cb52-885" aria-hidden="true" tabindex="-1"></a><span class="in">corr_coef &lt;- 0</span></span>
+<span id="cb52-886"><a href="#cb52-886" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-887"><a href="#cb52-887" aria-hidden="true" tabindex="-1"></a><span class="in"># crear vector vacio</span></span>
+<span id="cb52-888"><a href="#cb52-888" aria-hidden="true" tabindex="-1"></a><span class="in">cc_vector &lt;- vector()</span></span>
+<span id="cb52-889"><a href="#cb52-889" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-890"><a href="#cb52-890" aria-hidden="true" tabindex="-1"></a><span class="in">while (corr_coef &lt; 0.5) {</span></span>
+<span id="cb52-891"><a href="#cb52-891" aria-hidden="true" tabindex="-1"></a><span class="in">  set.seed(length(cc) + 1)</span></span>
+<span id="cb52-892"><a href="#cb52-892" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-893"><a href="#cb52-893" aria-hidden="true" tabindex="-1"></a><span class="in">  # generate variable 1</span></span>
+<span id="cb52-894"><a href="#cb52-894" aria-hidden="true" tabindex="-1"></a><span class="in">  v1 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
+<span id="cb52-895"><a href="#cb52-895" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-896"><a href="#cb52-896" aria-hidden="true" tabindex="-1"></a><span class="in">  set.seed(length(cc) + 100)</span></span>
+<span id="cb52-897"><a href="#cb52-897" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-898"><a href="#cb52-898" aria-hidden="true" tabindex="-1"></a><span class="in">  # generate variable 2</span></span>
+<span id="cb52-899"><a href="#cb52-899" aria-hidden="true" tabindex="-1"></a><span class="in">  v2 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
+<span id="cb52-900"><a href="#cb52-900" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-901"><a href="#cb52-901" aria-hidden="true" tabindex="-1"></a><span class="in">  # run correlation</span></span>
+<span id="cb52-902"><a href="#cb52-902" aria-hidden="true" tabindex="-1"></a><span class="in">  corr_coef &lt;- cor(v1, v2)</span></span>
+<span id="cb52-903"><a href="#cb52-903" aria-hidden="true" tabindex="-1"></a><span class="in">  cc &lt;- append(cc, corr_coef)</span></span>
 <span id="cb52-904"><a href="#cb52-904" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
 <span id="cb52-905"><a href="#cb52-905" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-906"><a href="#cb52-906" aria-hidden="true" tabindex="-1"></a><span class="in">print(cc)</span></span>
-<span id="cb52-907"><a href="#cb52-907" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb52-908"><a href="#cb52-908" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-909"><a href="#cb52-909" aria-hidden="true" tabindex="-1"></a>&nbsp;</span>
-<span id="cb52-910"><a href="#cb52-910" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-911"><a href="#cb52-911" aria-hidden="true" tabindex="-1"></a>Con un pequeño ajuste, un bucle <span class="in">`while`</span> también puede evaluar varias condiciones a la vez. Por ejemplo, también podemos incluir altos valores de correlación negativa:</span>
+<span id="cb52-906"><a href="#cb52-906" aria-hidden="true" tabindex="-1"></a><span class="in">if (length(cc) &gt; 10) {</span></span>
+<span id="cb52-907"><a href="#cb52-907" aria-hidden="true" tabindex="-1"></a><span class="in">  cc &lt;- cc[(length(cc) - 10):length(cc)]</span></span>
+<span id="cb52-908"><a href="#cb52-908" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb52-909"><a href="#cb52-909" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-910"><a href="#cb52-910" aria-hidden="true" tabindex="-1"></a><span class="in">print(cc)</span></span>
+<span id="cb52-911"><a href="#cb52-911" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb52-912"><a href="#cb52-912" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-913"><a href="#cb52-913" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=T, echo=T}</span></span>
+<span id="cb52-913"><a href="#cb52-913" aria-hidden="true" tabindex="-1"></a>&nbsp;</span>
 <span id="cb52-914"><a href="#cb52-914" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-915"><a href="#cb52-915" aria-hidden="true" tabindex="-1"></a><span class="in"># definir valor inicial</span></span>
-<span id="cb52-916"><a href="#cb52-916" aria-hidden="true" tabindex="-1"></a><span class="in">corr_coef &lt;- 0</span></span>
-<span id="cb52-917"><a href="#cb52-917" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-918"><a href="#cb52-918" aria-hidden="true" tabindex="-1"></a><span class="in"># crear vector vacio</span></span>
-<span id="cb52-919"><a href="#cb52-919" aria-hidden="true" tabindex="-1"></a><span class="in">cc_vector &lt;- NULL</span></span>
-<span id="cb52-920"><a href="#cb52-920" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-921"><a href="#cb52-921" aria-hidden="true" tabindex="-1"></a><span class="in">while (corr_coef &lt; 0.5 &amp; corr_coef &gt; -0.5) {</span></span>
-<span id="cb52-922"><a href="#cb52-922" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 1</span></span>
-<span id="cb52-923"><a href="#cb52-923" aria-hidden="true" tabindex="-1"></a><span class="in">  v1 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
+<span id="cb52-915"><a href="#cb52-915" aria-hidden="true" tabindex="-1"></a>Con un pequeño ajuste, un bucle <span class="in">`while`</span> también puede evaluar varias condiciones a la vez. Por ejemplo, también podemos incluir altos valores de correlación negativa:</span>
+<span id="cb52-916"><a href="#cb52-916" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-917"><a href="#cb52-917" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=T, echo=T}</span></span>
+<span id="cb52-918"><a href="#cb52-918" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-919"><a href="#cb52-919" aria-hidden="true" tabindex="-1"></a><span class="in"># definir valor inicial</span></span>
+<span id="cb52-920"><a href="#cb52-920" aria-hidden="true" tabindex="-1"></a><span class="in">corr_coef &lt;- 0</span></span>
+<span id="cb52-921"><a href="#cb52-921" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-922"><a href="#cb52-922" aria-hidden="true" tabindex="-1"></a><span class="in"># crear vector vacio</span></span>
+<span id="cb52-923"><a href="#cb52-923" aria-hidden="true" tabindex="-1"></a><span class="in">cc_vector &lt;- vector()</span></span>
 <span id="cb52-924"><a href="#cb52-924" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-925"><a href="#cb52-925" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 2</span></span>
-<span id="cb52-926"><a href="#cb52-926" aria-hidden="true" tabindex="-1"></a><span class="in">  v2 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
-<span id="cb52-927"><a href="#cb52-927" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-928"><a href="#cb52-928" aria-hidden="true" tabindex="-1"></a><span class="in">  # correr correlacion</span></span>
-<span id="cb52-929"><a href="#cb52-929" aria-hidden="true" tabindex="-1"></a><span class="in">  corr_coef &lt;- cor(v1, v2)</span></span>
-<span id="cb52-930"><a href="#cb52-930" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-931"><a href="#cb52-931" aria-hidden="true" tabindex="-1"></a><span class="in">  # guardar resultados</span></span>
-<span id="cb52-932"><a href="#cb52-932" aria-hidden="true" tabindex="-1"></a><span class="in">  cc_vector[length(cc_vector) + 1] &lt;- corr_coef</span></span>
-<span id="cb52-933"><a href="#cb52-933" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb52-925"><a href="#cb52-925" aria-hidden="true" tabindex="-1"></a><span class="in">while (corr_coef &lt; 0.5 &amp; corr_coef &gt; -0.5) {</span></span>
+<span id="cb52-926"><a href="#cb52-926" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 1</span></span>
+<span id="cb52-927"><a href="#cb52-927" aria-hidden="true" tabindex="-1"></a><span class="in">  v1 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
+<span id="cb52-928"><a href="#cb52-928" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-929"><a href="#cb52-929" aria-hidden="true" tabindex="-1"></a><span class="in">  # generar la variable 2</span></span>
+<span id="cb52-930"><a href="#cb52-930" aria-hidden="true" tabindex="-1"></a><span class="in">  v2 &lt;- rnorm(n = 20, mean = 100, sd = 20)</span></span>
+<span id="cb52-931"><a href="#cb52-931" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-932"><a href="#cb52-932" aria-hidden="true" tabindex="-1"></a><span class="in">  # correr correlacion</span></span>
+<span id="cb52-933"><a href="#cb52-933" aria-hidden="true" tabindex="-1"></a><span class="in">  corr_coef &lt;- cor(v1, v2)</span></span>
 <span id="cb52-934"><a href="#cb52-934" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-935"><a href="#cb52-935" aria-hidden="true" tabindex="-1"></a><span class="in">head(cc_vector)</span></span>
-<span id="cb52-936"><a href="#cb52-936" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb52-937"><a href="#cb52-937" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-938"><a href="#cb52-938" aria-hidden="true" tabindex="-1"></a>&nbsp;</span>
-<span id="cb52-939"><a href="#cb52-939" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-940"><a href="#cb52-940" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=T, echo=F, message=F, warning=F}</span></span>
-<span id="cb52-941"><a href="#cb52-941" aria-hidden="true" tabindex="-1"></a><span class="in">cc &lt;- cc_vector</span></span>
-<span id="cb52-942"><a href="#cb52-942" aria-hidden="true" tabindex="-1"></a><span class="in">cc &lt;- data.frame(y = cc, x = 1:length(cc))</span></span>
+<span id="cb52-935"><a href="#cb52-935" aria-hidden="true" tabindex="-1"></a><span class="in">  # guardar resultados</span></span>
+<span id="cb52-936"><a href="#cb52-936" aria-hidden="true" tabindex="-1"></a><span class="in">  cc_vector[length(cc_vector) + 1] &lt;- corr_coef</span></span>
+<span id="cb52-937"><a href="#cb52-937" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb52-938"><a href="#cb52-938" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-939"><a href="#cb52-939" aria-hidden="true" tabindex="-1"></a><span class="in">head(cc_vector)</span></span>
+<span id="cb52-940"><a href="#cb52-940" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb52-941"><a href="#cb52-941" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-942"><a href="#cb52-942" aria-hidden="true" tabindex="-1"></a>&nbsp;</span>
 <span id="cb52-943"><a href="#cb52-943" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-944"><a href="#cb52-944" aria-hidden="true" tabindex="-1"></a><span class="in">if (nrow(cc) &gt; 50) {</span></span>
-<span id="cb52-945"><a href="#cb52-945" aria-hidden="true" tabindex="-1"></a><span class="in">  cc &lt;- cc[(nrow(cc) - 50):nrow(cc),]</span></span>
-<span id="cb52-946"><a href="#cb52-946" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb52-944"><a href="#cb52-944" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=T, echo=F, message=F, warning=F}</span></span>
+<span id="cb52-945"><a href="#cb52-945" aria-hidden="true" tabindex="-1"></a><span class="in">cc &lt;- cc_vector</span></span>
+<span id="cb52-946"><a href="#cb52-946" aria-hidden="true" tabindex="-1"></a><span class="in">cc &lt;- data.frame(y = cc, x = 1:length(cc))</span></span>
 <span id="cb52-947"><a href="#cb52-947" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-948"><a href="#cb52-948" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = cc, aes(x, y)) +</span></span>
-<span id="cb52-949"><a href="#cb52-949" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_hline(yintercept = c(-0.5, 0.5),</span></span>
-<span id="cb52-950"><a href="#cb52-950" aria-hidden="true" tabindex="-1"></a><span class="in">             col = cols[4],</span></span>
-<span id="cb52-951"><a href="#cb52-951" aria-hidden="true" tabindex="-1"></a><span class="in">             lwd = 3) +</span></span>
-<span id="cb52-952"><a href="#cb52-952" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_line(col = cols[8], lwd = 4) +</span></span>
-<span id="cb52-953"><a href="#cb52-953" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(x = "Iteraciones", y = "Correlación de pearson (r)") +</span></span>
-<span id="cb52-954"><a href="#cb52-954" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_classic(base_size = 25)</span></span>
-<span id="cb52-955"><a href="#cb52-955" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb52-956"><a href="#cb52-956" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-957"><a href="#cb52-957" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb52-958"><a href="#cb52-958" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-959"><a href="#cb52-959" aria-hidden="true" tabindex="-1"></a>::: {.alert .alert-info}</span>
-<span id="cb52-960"><a href="#cb52-960" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicio 3</span></span>
-<span id="cb52-961"><a href="#cb52-961" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-962"><a href="#cb52-962" aria-hidden="true" tabindex="-1"></a>3.1 Haga un bucle <span class="in">`while`</span> que se detenga si la correlación es superior a 0.8 o si el bucle ha estado ejecutándose durante más de 10 segundos (consejo: use la función<span class="in">`difftime`</span> y/o <span class="in">`as.numeric`</span>)</span>
-<span id="cb52-963"><a href="#cb52-963" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-964"><a href="#cb52-964" aria-hidden="true" tabindex="-1"></a>3.2 Haga un bucle <span class="in">`repeat`</span> que se detenga solo si la correlación es mayor que 0.5 pero menor que 0.55</span>
-<span id="cb52-965"><a href="#cb52-965" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb52-966"><a href="#cb52-966" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-967"><a href="#cb52-967" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb52-968"><a href="#cb52-968" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-969"><a href="#cb52-969" aria-hidden="true" tabindex="-1"></a><span class="fu">## Referencias</span></span>
+<span id="cb52-948"><a href="#cb52-948" aria-hidden="true" tabindex="-1"></a><span class="in">if (nrow(cc) &gt; 50) {</span></span>
+<span id="cb52-949"><a href="#cb52-949" aria-hidden="true" tabindex="-1"></a><span class="in">  cc &lt;- cc[(nrow(cc) - 50):nrow(cc),]</span></span>
+<span id="cb52-950"><a href="#cb52-950" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb52-951"><a href="#cb52-951" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-952"><a href="#cb52-952" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = cc, aes(x, y)) +</span></span>
+<span id="cb52-953"><a href="#cb52-953" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_hline(yintercept = c(-0.5, 0.5),</span></span>
+<span id="cb52-954"><a href="#cb52-954" aria-hidden="true" tabindex="-1"></a><span class="in">             col = cols[4],</span></span>
+<span id="cb52-955"><a href="#cb52-955" aria-hidden="true" tabindex="-1"></a><span class="in">             lwd = 3) +</span></span>
+<span id="cb52-956"><a href="#cb52-956" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_line(col = cols[8], lwd = 4) +</span></span>
+<span id="cb52-957"><a href="#cb52-957" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(x = "Iteraciones", y = "Correlación de pearson (r)") +</span></span>
+<span id="cb52-958"><a href="#cb52-958" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_classic(base_size = 25)</span></span>
+<span id="cb52-959"><a href="#cb52-959" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb52-960"><a href="#cb52-960" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-961"><a href="#cb52-961" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb52-962"><a href="#cb52-962" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-963"><a href="#cb52-963" aria-hidden="true" tabindex="-1"></a>::: {.alert .alert-info}</span>
+<span id="cb52-964"><a href="#cb52-964" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicio 3</span></span>
+<span id="cb52-965"><a href="#cb52-965" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-966"><a href="#cb52-966" aria-hidden="true" tabindex="-1"></a>3.1 Haga un bucle <span class="in">`while`</span> que se detenga si la correlación es superior a 0.8 o si el bucle ha estado ejecutándose durante más de 10 segundos (consejo: use la función<span class="in">`difftime`</span> y/o <span class="in">`as.numeric`</span>)</span>
+<span id="cb52-967"><a href="#cb52-967" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-968"><a href="#cb52-968" aria-hidden="true" tabindex="-1"></a>3.2 Haga un bucle <span class="in">`repeat`</span> que se detenga solo si la correlación es mayor que 0.5 pero menor que 0.55</span>
+<span id="cb52-969"><a href="#cb52-969" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb52-970"><a href="#cb52-970" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-971"><a href="#cb52-971" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Advanced R, H Wickham</span><span class="co">](http://adv-r.had.co.nz/Functionals.html)</span></span>
-<span id="cb52-972"><a href="#cb52-972" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">A Tutorial on Loops in R - Usage and Alternatives, DataCamp</span><span class="co">](https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r)</span></span>
-<span id="cb52-973"><a href="#cb52-973" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-974"><a href="#cb52-974" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb52-975"><a href="#cb52-975" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-976"><a href="#cb52-976" aria-hidden="true" tabindex="-1"></a>&lt;font size="5"&gt;Session information&lt;/font&gt;</span>
+<span id="cb52-971"><a href="#cb52-971" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb52-972"><a href="#cb52-972" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-973"><a href="#cb52-973" aria-hidden="true" tabindex="-1"></a><span class="fu">## Referencias</span></span>
+<span id="cb52-974"><a href="#cb52-974" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-975"><a href="#cb52-975" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Advanced R, H Wickham</span><span class="co">](http://adv-r.had.co.nz/Functionals.html)</span></span>
+<span id="cb52-976"><a href="#cb52-976" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">A Tutorial on Loops in R - Usage and Alternatives, DataCamp</span><span class="co">](https://www.datacamp.com/community/tutorials/tutorial-on-loops-in-r)</span></span>
 <span id="cb52-977"><a href="#cb52-977" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-978"><a href="#cb52-978" aria-hidden="true" tabindex="-1"></a><span class="in">```{r session info, echo=F}</span></span>
+<span id="cb52-978"><a href="#cb52-978" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb52-979"><a href="#cb52-979" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb52-980"><a href="#cb52-980" aria-hidden="true" tabindex="-1"></a><span class="in">sessionInfo()</span></span>
-<span id="cb52-981"><a href="#cb52-981" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb52-980"><a href="#cb52-980" aria-hidden="true" tabindex="-1"></a>&lt;font size="5"&gt;Session information&lt;/font&gt;</span>
+<span id="cb52-981"><a href="#cb52-981" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-982"><a href="#cb52-982" aria-hidden="true" tabindex="-1"></a><span class="in">```{r session info, echo=F}</span></span>
+<span id="cb52-983"><a href="#cb52-983" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-984"><a href="#cb52-984" aria-hidden="true" tabindex="-1"></a><span class="in">sessionInfo()</span></span>
+<span id="cb52-985"><a href="#cb52-985" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
