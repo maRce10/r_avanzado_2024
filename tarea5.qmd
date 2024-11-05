@@ -4,7 +4,7 @@ format:
   html:
     code-tools: false
     code-line-numbers: false
-    embed-resources: true
+    embed-resources: false
 ---
 
 ```{r,echo=FALSE,message=FALSE}
@@ -266,7 +266,6 @@ head(sp_dat, 3)
 
 9.  Publique el reporte en [Rpubs](https://rpubs.com/) y añada el enlace en el reporte (use un enlace en el texto).
 ```
-
 :::
 
  

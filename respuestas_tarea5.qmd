@@ -297,17 +297,6 @@ sp_dat$rango_prof <- sp_dat$max_prof - sp_dat$min_prof
 
 ```
 
-8.  Incluya el cuadro de datos generado en los ejercicios 5 a 7 como una tabla en su reporte usando la función `DT` del paquete `datatable`.
-
-*Respuesta:*
-
-```{r}
-library(DT)
-datatable(sp_dat)
-
-```
-
-9.  Publique el reporte en [Rpubs](https://rpubs.com/) y añada el enlace en el reporte (use un enlace en el texto).
 :::
 
  

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -179,11 +179,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="./solucion_tarea4.html">
- <span class="dropdown-text">Solucion tarea 4</span></a>
+ <span class="dropdown-text">Solución tarea 4</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./tarea5.html">
  <span class="dropdown-text">Tarea 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./respuestas_tarea5.html">
+ <span class="dropdown-text">Solución Tarea 5</span></a>
   </li>  
     </ul>
   </li>
@@ -260,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">24 de octubre de 2024</p>
+      <p class="date">5 de noviembre de 2024</p>
     </div>
   </div>
   
@@ -904,8 +908,9 @@ flowchart LR
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">apropos</span>(<span class="st">"apply$"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "apply"      "dendrapply" "eapply"     "kernapply"  "lapply"    
- [6] "mapply"     "rapply"     "sapply"     "tapply"     "vapply"    </code></pre>
+<pre><code> [1] ".mapply"    "apply"      "dendrapply" "eapply"     "kernapply" 
+ [6] "lapply"     "mapply"     "rapply"     "sapply"     "tapply"    
+[11] "vapply"    </code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1122,17 +1127,17 @@ flowchart LR
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r numberLines lineAnchors code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">replicate</span>(<span class="at">n =</span> <span class="dv">3</span>, <span class="at">expr =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>           [,1]     [,2]      [,3]
- [1,] -0.551784  0.93318 -1.645104
- [2,]  0.481300  0.84994 -0.869838
- [3,] -1.073957 -1.83684  0.160891
- [4,] -0.820394 -0.20550  0.084014
- [5,] -1.113492 -1.65319 -0.319242
- [6,]  1.137027  0.90619 -1.298977
- [7,]  0.556740 -0.28757  0.825499
- [8,] -0.506969  0.51991 -0.743259
- [9,] -0.057364 -0.60575 -0.270880
-[10,] -0.270253  1.45479 -0.066871</code></pre>
+<pre><code>          [,1]      [,2]     [,3]
+ [1,] -1.70379 -0.779508  0.88756
+ [2,] -0.25152  1.958128 -1.53954
+ [3,]  0.37410  2.629190  1.55567
+ [4,]  1.06945  1.074561 -0.19056
+ [5,]  0.41745 -1.238963  0.64199
+ [6,]  0.17663 -0.485376 -1.31549
+ [7,] -1.03595 -0.593476  0.92146
+ [8,] -0.12470  1.007683  0.58038
+ [9,]  0.57011 -0.936084  1.34055
+[10,]  0.54226  0.035069 -0.31528</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1205,7 +1210,7 @@ flowchart LR
 <span id="cb44-21"><a href="#cb44-21"></a><span class="fu">head</span>(cc_vector)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  0.0086294  0.0783378  0.3214805  0.0156626 -0.0830365  0.0088494</code></pre>
+<pre><code>[1] -0.209380 -0.083643 -0.084109  0.043293 -0.104097 -0.036485</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1384,9 +1389,9 @@ flowchart LR
 <p><font size="5">Session information</font></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.2 (2023-10-31)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.2 LTS
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
@@ -1394,11 +1399,11 @@ LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
 
 locale:
  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [3] LC_TIME=es_CR.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=es_CR.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=es_CR.UTF-8       LC_NAME=C                 
  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+[11] LC_MEASUREMENT=es_CR.UTF-8 LC_IDENTIFICATION=C       
 
 time zone: America/Costa_Rica
 tzcode source: system (glibc)
@@ -1411,14 +1416,14 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] vctrs_0.6.5       cli_3.6.3         knitr_1.48        rlang_1.1.4      
- [5] xfun_0.47         generics_0.1.3    jsonlite_1.8.9    labeling_0.4.3   
+ [5] xfun_0.48         generics_0.1.3    jsonlite_1.8.9    labeling_0.4.3   
  [9] glue_1.8.0        colorspace_2.1-1  htmltools_0.5.8.1 scales_1.3.0     
-[13] fansi_1.0.6       rmarkdown_2.28    grid_4.3.2        evaluate_1.0.0   
+[13] fansi_1.0.6       rmarkdown_2.28    grid_4.4.1        evaluate_1.0.1   
 [17] munsell_0.5.1     tibble_3.2.1      fastmap_1.2.0     yaml_2.3.10      
-[21] lifecycle_1.0.4   compiler_4.3.2    dplyr_1.1.4       htmlwidgets_1.6.4
+[21] lifecycle_1.0.4   compiler_4.4.1    dplyr_1.1.4       htmlwidgets_1.6.4
 [25] pkgconfig_2.0.3   rstudioapi_0.16.0 farver_2.1.2      digest_0.6.37    
 [29] R6_2.5.1          tidyselect_1.2.1  utf8_1.2.4        pillar_1.9.0     
-[33] magrittr_2.0.3    withr_3.0.1       tools_4.3.2       gtable_0.3.5     </code></pre>
+[33] magrittr_2.0.3    withr_3.0.1       tools_4.4.1       gtable_0.3.5     </code></pre>
 </div>
 </div>
 
@@ -1570,6 +1575,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -1611,7 +1621,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
